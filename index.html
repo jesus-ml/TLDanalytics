@@ -1,7 +1,8 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html><head><meta charset=utf8><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: blob:; connect-src 'none'; worker-src blob:; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>TLD Analytics</title>
-<meta name="jesus" content="Jesús Morelos">
+<meta name="author" content="Jesús Morelos">
 <!-- TLD Analytics. Diseño y desarrollo: Jesús Morelos. -->
+<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
 <style>
@@ -367,7 +368,7 @@ body.nolearn .learn{display:none}
 .st-card:nth-child(1){animation-delay:1.05s}.st-card:nth-child(2){animation-delay:1.15s}.st-card:nth-child(3){animation-delay:1.25s}.st-card:nth-child(4){animation-delay:1.35s}
 .st-card:hover{transform:translateY(-3px);border-color:var(--sel);box-shadow:0 2px 4px rgba(11,45,91,.06),0 14px 34px rgba(11,45,91,.1)}
 .st-card:focus-within,.st-card:focus-visible{outline:3px solid rgba(56,130,246,.45)}
-.st-card input{display:none}
+.st-card{position:relative}.st-card input{position:absolute;opacity:0;width:1px;height:1px;left:16px;top:16px;pointer-events:none}.st-card:focus-within{outline:3px solid var(--sel);outline-offset:2px}
 .st-card .ico{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:var(--band);color:var(--azul)}
 .st-card .ico svg{width:18px;height:18px}
 .st-card b{font-size:14px;font-weight:600}
@@ -399,12 +400,12 @@ body.nolearn .learn{display:none}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 
-/* ===== Capa sobria, superficies lisas, sin degradados ni bordes ===== */
+/* ===== Capa sobria: superficies lisas, sin degradados ni bordes, estilo Apple ===== */
 :root{
   --bg:#F2F2F7; --win:#F2F2F7; --side:#F7F7FA; --tool:rgba(242,242,247,.86);
   --card:#FFFFFF; --sunk:rgba(118,118,128,.10); --line:rgba(60,60,67,.12); --line2:rgba(60,60,67,.20);
-  --fg:#0B1A30; --fg2:#3A4659; --muted:#86868B; --hover:rgba(118,118,128,.08);
-  --sel:#2F74E8; --accent:#2F74E8; --azul:#3882F6; --band:rgba(56,130,246,.10);
+  --fg:#0B1A30; --fg2:#3A4659; --muted:#6C6C72; --hover:rgba(118,118,128,.08);
+  --sel:#1F6FE5; --accent:#1A5BC8; --pri:#1F6FE5; --azul:#3882F6; --band:rgba(56,130,246,.10);
   --nsel:rgba(47,116,232,.12); --nselfg:#0B1A30; --nselic:#2F74E8;
   --ok:#248A3D; --ok-soft:transparent; --warn:#B25000; --warn-soft:rgba(255,149,0,.12); --bad:#D70015; --bad-soft:rgba(255,59,48,.10);
   --shadow:none; --sheet:0 30px 80px rgba(0,0,0,.18);
@@ -414,16 +415,16 @@ body.nolearn .learn{display:none}
   --bg:#000000; --win:#000000; --side:#121214; --tool:rgba(0,0,0,.78);
   --card:#1C1C1E; --sunk:rgba(118,118,128,.20); --line:rgba(84,84,88,.40); --line2:rgba(84,84,88,.60);
   --fg:#F5F5F7; --fg2:#C7C7CC; --muted:#8E8E93; --hover:rgba(118,118,128,.14);
-  --sel:#3D8BFF; --accent:#4C95FF; --azul:#3D8BFF; --band:rgba(61,139,255,.16);
+  --sel:#3D8BFF; --accent:#5EA1FF; --azul:#3D8BFF; --pri:#1F6FE5; --band:rgba(61,139,255,.16);
   --nsel:rgba(61,139,255,.20); --nselfg:#F5F5F7; --nselic:#4C95FF;
-  --ok:#30D158; --warn:#FF9F0A; --warn-soft:rgba(255,159,10,.14); --bad:#FF453A; --bad-soft:rgba(255,69,58,.14); --sheet:0 30px 80px rgba(0,0,0,.6)}}
+  --ok:#30D158; --warn:#FF9F0A; --warn-soft:rgba(255,159,10,.14); --bad:#FF6B61; --bad-soft:rgba(255,69,58,.14); --sheet:0 30px 80px rgba(0,0,0,.6)}}
 :root[data-theme="dark"]{
   --bg:#000000; --win:#000000; --side:#121214; --tool:rgba(0,0,0,.78);
   --card:#1C1C1E; --sunk:rgba(118,118,128,.20); --line:rgba(84,84,88,.40); --line2:rgba(84,84,88,.60);
   --fg:#F5F5F7; --fg2:#C7C7CC; --muted:#8E8E93; --hover:rgba(118,118,128,.14);
-  --sel:#3D8BFF; --accent:#4C95FF; --azul:#3D8BFF; --band:rgba(61,139,255,.16);
+  --sel:#3D8BFF; --accent:#5EA1FF; --azul:#3D8BFF; --pri:#1F6FE5; --band:rgba(61,139,255,.16);
   --nsel:rgba(61,139,255,.20); --nselfg:#F5F5F7; --nselic:#4C95FF;
-  --ok:#30D158; --warn:#FF9F0A; --warn-soft:rgba(255,159,10,.14); --bad:#FF453A; --bad-soft:rgba(255,69,58,.14); --sheet:0 30px 80px rgba(0,0,0,.6)}
+  --ok:#30D158; --warn:#FF9F0A; --warn-soft:rgba(255,159,10,.14); --bad:#FF6B61; --bad-soft:rgba(255,69,58,.14); --sheet:0 30px 80px rgba(0,0,0,.6)}
 body{font-size:13.5px;letter-spacing:-.003em}
 .side{border-right:.5px solid var(--line2)}
 .tool{border-bottom:.5px solid var(--line)}
@@ -436,7 +437,7 @@ body{font-size:13.5px;letter-spacing:-.003em}
 .ch h3{font-size:14px;font-weight:600;letter-spacing:-.01em}
 .btn{border:none;box-shadow:none;background:var(--sunk);color:var(--accent);border-radius:8px;font-weight:500;height:30px}
 .btn:hover{background:var(--hover);filter:brightness(.97)}
-.btn.pri{background:var(--sel);color:#FFFFFF}
+.btn.pri{background:var(--pri,var(--sel));color:#FFFFFF}
 .btn.on{background:var(--sunk);color:var(--accent)}
 .btn.danger{background:var(--bad);color:#fff}
 .link{all:unset;cursor:pointer;color:var(--accent);font-weight:500;font-size:13.5px;display:inline-flex;align-items:center;gap:3px;white-space:nowrap}
@@ -545,7 +546,7 @@ tbody tr.click:hover td{background:var(--hover)}
   .steps{gap:14px}
 }
 
-/* =====  suave, redondeado, con respuesta al tacto ===== */
+/* ===== Toque coreano: suave, redondeado, con respuesta al tacto ===== */
 :root{--tb:#EAF2FF;--tg:#E7F6EC;--tr:#FDECEC;--to:#FFF2E0;--soft:0 1px 2px rgba(15,23,42,.03),0 8px 26px rgba(15,23,42,.05);--spring:cubic-bezier(.3,1.35,.45,1)}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--tb:rgba(61,139,255,.18);--tg:rgba(48,209,88,.16);--tr:rgba(255,69,58,.16);--to:rgba(255,159,10,.16);--soft:none}}
 :root[data-theme="dark"]{--tb:rgba(61,139,255,.18);--tg:rgba(48,209,88,.16);--tr:rgba(255,69,58,.16);--to:rgba(255,159,10,.16);--soft:none}
@@ -606,8 +607,21 @@ select option,select optgroup{background-color:var(--card);color:var(--fg)}
 /* modo oscuro: negro con subtono gris */
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0E0E10; --win:#0E0E10; --side:#161618; --tool:rgba(14,14,16,.84); --card:#1C1C1E}}
 :root[data-theme="dark"]{--bg:#0E0E10; --win:#0E0E10; --side:#161618; --tool:rgba(14,14,16,.84); --card:#1C1C1E}
+
+/* accesibilidad y selector de figuras */
+.vh{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.card>*{min-width:0}
+.kpi{position:relative}.kpi .kpi-hit{all:unset;position:absolute;inset:0;border-radius:inherit;cursor:pointer;z-index:1}
+.kpi .kpi-hit:focus-visible{outline:3px solid var(--sel);outline-offset:2px}.kpi .qm{position:relative;z-index:2}
+[role=region][tabindex="0"]:focus-visible{outline:3px solid var(--sel);outline-offset:2px}
+.rpsel{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:12.5px;color:var(--fg2)}
+.rpsel b{font-weight:600;color:var(--fg)}.rpsel label{display:inline-flex;gap:5px;align-items:center}
+.rpf{position:relative}.rpf.off .rpimg{opacity:.35}.rpf.off figcaption{opacity:.6}
+.rpck{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12.5px}
+.rpck label{display:inline-flex;gap:6px;align-items:center;font-weight:500}
+.rpck .acts{display:flex;gap:4px}.rpck .btn{height:24px;padding:0 8px;font-size:11.5px}
 </style>
-<div class="start" id="start" role="dialog" aria-label="Inicio de TLD Analytics"><div class="st-in">
+<div class="start" id="start" role="dialog" aria-modal="true" aria-label="Inicio de TLD Analytics"><div class="st-in">
   <div class="st-fl" id="stFl"><div class="rot"><i class="flw sym-l"></i><i class="flw sym-d"></i></div></div>
   <div class="sp-wm"><b>TLD</b> <span>ANALYTICS</span></div>
   <p class="st-tag" id="stTag">Análisis y calibración de dosímetros termoluminiscentes</p>
@@ -621,7 +635,7 @@ select option,select optgroup{background-color:var(--card);color:var(--fg)}
   <aside class="side">
     <div class="brand"><span class="lg" id="brandLg"><i class="flw sym-l" role="img" aria-label="TLD Analytics"></i><i class="flw sym-d"></i></span><div class="wm"><b>TLD</b> <span>ANALYTICS</span></div></div>
     <nav class="srcl" id="nav" aria-label="Secciones"></nav>
-    <div class="sidefoot"><div class="sf"><svg class="i" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span>Tus archivos se procesan en este navegador. Solo el asistente envía a tu proveedor de IA los datos necesarios para responder tus preguntas.</span></div><button class="btn" id="closeBtn" style="justify-content:center">Cerrar proyecto</button><div class="credit">Diseñado por <b>Jesús Morelos</b></div></div>
+    <div class="sidefoot"><div class="sf"><svg class="i" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span>Tus archivos se procesan en este navegador. Solo el asistente envía datos a Claude, y únicamente cuando le preguntas algo.</span></div><button class="btn" id="closeBtn" style="justify-content:center">Cerrar proyecto</button><div class="credit">Diseñado por <b>Jesús Morelos</b></div></div>
   </aside>
   <div class="main">
     <header class="tool">
@@ -642,10 +656,10 @@ select option,select optgroup{background-color:var(--card);color:var(--fg)}
 <div class="toast" id="toast" role="status"></div>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@e965/xlsx@0.20.3/dist/xlsx.full.min.js" integrity="sha384-EnyY0/GSHQGSxSgMwaIPzSESbqoOLSexfnSMN2AP+39Ckmn92stwABZynq1JyzdT" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js" integrity="sha384-o5uz97et3bErHvpKfD4Jz4n0JfhJDWABFuF4NP+iEEDxE1VwMWJ19QGR0lqFZnr6" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf@4.2.1/dist/jspdf.umd.min.js" integrity="sha384-qovJwSBbRDPP5cEjCp8S0UP66wrvnjaa60XMOGzTNanrThcrGfXfnZkvgY8N1KT3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js" integrity="sha384-+mbV2IY1Zk/X1p/nWllGySJSUN8uMs+gUAN10Or95UBH0fpj6GfKgPmgC5EXieXG" crossorigin="anonymous"></script>
 <script>
 /* TLD Analytics: análisis y calibración de dosímetros termoluminiscentes.
    Diseño y desarrollo: Jesús Morelos. */
@@ -656,7 +670,7 @@ const RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const S={datasets:[],active:"home",sub:{},sample:false,doses:{},dt:{},insp:null,visited:{},exported:false,
   settings:{tol:5,ref:"median",noSignal:10,peakTol:20},chat:[]};
 const charts={},factories={};
-const fmt=(v,d=2)=>v==null||!isFinite(v)?"—":v.toLocaleString("es-MX",{maximumFractionDigits:d,minimumFractionDigits:d});
+const fmt=(v,d=2)=>v==null||!isFinite(v)?"—":(Math.abs(v)<.5*10**-d?0:v).toLocaleString("es-MX",{maximumFractionDigits:d,minimumFractionDigits:d});
 const fmtBig=v=>{if(v==null||!isFinite(v))return"—";if(Number.isInteger(v))return v.toLocaleString("es-MX");const a=Math.abs(v);return a>=1e5?v.toLocaleString("es-MX",{maximumFractionDigits:0}):fmt(v,a<10?3:2)};
 const sci=v=>{if(v==null||!isFinite(v))return"—";const a=Math.abs(v);return a>=1e6?(v/1e6).toLocaleString("es-MX",{maximumFractionDigits:2})+" M":a>=1e3?(v/1e3).toLocaleString("es-MX",{maximumFractionDigits:1})+" k":fmt(v,a<10?2:1)};
 const pct=(v,d=1)=>v==null||!isFinite(v)?"—":(v>0?"+":"")+fmt(v,d)+" %";
@@ -664,19 +678,29 @@ const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&g
 const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 function toast(t){const e=$("#toast");e.textContent=t;e.classList.add("on");clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove("on"),2200)}
 function tldNum(name){const m=String(name).match(/(\d+)(?!.*\d)/);return m?+m[1]:null}
-function toNum(v){if(typeof v==="number")return isFinite(v)?v:null;if(v==null)return null;let s=String(v).trim().replace(/\s/g,"");if(!s)return null;if(/^-?\d+,\d+$/.test(s))s=s.replace(",",".");else s=s.replace(/,/g,"");const n=Number(s);return isFinite(n)?n:null}
+function toNum(v){if(typeof v==="number")return isFinite(v)?v:null;if(v==null)return null;let s=String(v).trim().replace(/[\s ]/g,"");if(!s)return null;
+  if(/^[-+]?[1-9]\d{0,2}(,\d{3})+(\.\d+)?$/.test(s))s=s.replace(/,/g,"");/* 1,234 o 1,234,567.8: coma de miles (es-MX) */
+  else if(/^[-+]?\d{1,3}(\.\d{3})+,\d+$/.test(s))s=s.replace(/\./g,"").replace(",",".");/* 1.234,56: formato europeo */
+  else if(/^[-+]?\d*,\d+$/.test(s))s=s.replace(",",".");/* 12,5: coma decimal */
+  else s=s.replace(/,/g,"");const n=Number(s);return isFinite(n)?n:null}
+const isAmbig=v=>typeof v==="string"&&/^[-+]?[1-9]\d{0,2},\d{3}$/.test(v.trim());
+function amin(){let m=Infinity;for(const a of arguments){if(a!=null&&typeof a==="object"&&a.length!==undefined){for(let i=0;i<a.length;i++){const x=+a[i];if(x!==x)return NaN;if(x<m)m=x}}else{const x=+a;if(x!==x)return NaN;if(x<m)m=x}}return m}
+function amax(){let m=-Infinity;for(const a of arguments){if(a!=null&&typeof a==="object"&&a.length!==undefined){for(let i=0;i<a.length;i++){const x=+a[i];if(x!==x)return NaN;if(x>m)m=x}}else{const x=+a;if(x!==x)return NaN;if(x>m)m=x}}return m}
+const thin=(pts,n)=>{if(!pts||pts.length<=n)return pts;const st=pts.length/n,o=[];for(let i=0;i<n;i++)o.push(pts[Math.floor(i*st)]);o.push(pts[pts.length-1]);return o};
+const csvCell=v=>{if(v==null||(typeof v==="number"&&!isFinite(v)))return"";let s=String(v);if(typeof v!=="number"&&/^[=+\-@\t\r]/.test(s)&&!/^[-+]?\d*\.?\d+(e[-+]?\d+)?$/i.test(s))s="'"+s;return/[",\n\r;]/.test(s)?`"${s.replace(/"/g,'""')}"`:s};
 const median=a=>{const b=[...a].sort((x,y)=>x-y),n=b.length;return n?(n%2?b[(n-1)/2]:(b[n/2-1]+b[n/2])/2):NaN};
 const quant=(a,p)=>{const b=[...a].sort((x,y)=>x-y);if(!b.length)return NaN;const h=(b.length-1)*p,l=Math.floor(h);return b[l]+(b[Math.min(l+1,b.length-1)]-b[l])*(h-l)};
 const mean=a=>a.reduce((s,v)=>s+v,0)/a.length;
 const sd=a=>{if(a.length<2)return NaN;const m=mean(a);return Math.sqrt(a.reduce((s,v)=>s+(v-m)**2,0)/(a.length-1))};
 function normInv(p){const a=[-39.6968302866538,220.946098424521,-275.928510446969,138.357751867269,-30.6647980661472,2.50662827745924],b=[-54.4760987982241,161.585836858041,-155.698979859887,66.8013118877197,-13.2806815528857],c=[-.00778489400243029,-.322396458041136,-2.40075827716184,-2.54973253934373,4.37466414146497,2.93816398269878],d=[.00778469570904146,.32246712907004,2.445134137143,3.75440866190742];const pl=.02425;let q,r;if(p<pl){q=Math.sqrt(-2*Math.log(p));return(((((c[0]*q+c[1])*q+c[2])*q+c[3])*q+c[4])*q+c[5])/((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1)}if(p<=1-pl){q=p-.5;r=q*q;return(((((a[0]*r+a[1])*r+a[2])*r+a[3])*r+a[4])*r+a[5])*q/(((((b[0]*r+b[1])*r+b[2])*r+b[3])*r+b[4])*r+1)}q=Math.sqrt(-2*Math.log(1-p));return-(((((c[0]*q+c[1])*q+c[2])*q+c[3])*q+c[4])*q+c[5])/((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1)}
-function tInv975(df){const z=1.959964;return z+(z**3+z)/(4*df)+(5*z**5+16*z**3+3*z)/(96*df*df)+(3*z**7+19*z**5+17*z**3-15*z)/(384*df**3)}
+const T975=[12.706204736,4.30265273,3.182446305,2.776445105,2.570581836,2.446911851,2.364624252,2.306004135,2.262157163,2.228138852,2.20098516,2.17881283,2.160368656,2.144786688,2.131449546,2.119905299,2.109815578,2.10092204,2.093024054,2.085963447,2.079613845,2.073873068,2.06865761,2.063898562,2.059538553,2.055529439,2.051830516,2.048407142,2.045229642,2.042272456];
+function tInv975(df){if(df>=1&&df<=30&&Number.isInteger(df))return T975[df-1];const z=1.959964;return z+(z**3+z)/(4*df)+(5*z**5+16*z**3+3*z)/(96*df*df)+(3*z**7+19*z**5+17*z**3-15*z)/(384*df**3)}
 function describe(a){const n=a.length;if(!n)return null;const m=mean(a),s=sd(a),q1=quant(a,.25),q3=quant(a,.75);
   const sk=n>2?a.reduce((t,v)=>t+((v-m)/s)**3,0)*n/((n-1)*(n-2)):NaN;
   const ku=n>3?(n*(n+1)/((n-1)*(n-2)*(n-3)))*a.reduce((t,v)=>t+((v-m)/s)**4,0)-3*(n-1)**2/((n-2)*(n-3)):NaN;
   const jb=n/6*(sk**2+ku**2/4),se=s/Math.sqrt(n),t=n>1?tInv975(n-1):NaN;
-  return{n,mean:m,median:median(a),sd:s,cv:s/m*100,min:Math.min(...a),max:Math.max(...a),range:Math.max(...a)-Math.min(...a),q1,q3,iqr:q3-q1,sk,ku,se,ciLo:m-t*se,ciHi:m+t*se,jbP:Math.exp(-jb/2)}}
-function bins(vals,k){const lo=Math.min(...vals),hi=Math.max(...vals),w=(hi-lo)/k||1;const e=Array.from({length:k+1},(_,i)=>lo+i*w);return{w,e,c:e.slice(0,-1).map((x,i)=>vals.filter(v=>v>=x&&(i===k-1?v<=e[i+1]:v<e[i+1])).length)}}
+  return{n,mean:m,median:median(a),sd:s,cv:s/m*100,min:amin(a),max:amax(a),range:amax(a)-amin(a),q1,q3,iqr:q3-q1,sk,ku,se,ciLo:m-t*se,ciHi:m+t*se,jbP:Math.exp(-jb/2)}}
+function bins(vals,k){const lo=amin(vals),hi=amax(vals),w=(hi-lo)/k||1;const e=Array.from({length:k+1},(_,i)=>lo+i*w);return{w,e,c:e.slice(0,-1).map((x,i)=>vals.filter(v=>v>=x&&(i===k-1?v<=e[i+1]:v<e[i+1])).length)}}
 function lsGet(k){try{return localStorage.getItem(k)}catch(e){return null}}
 function lsSet(k,v){try{localStorage.setItem(k,v)}catch(e){}}
 
@@ -706,7 +730,8 @@ const Y_UNITS=["cuentas/°C","cuentas por canal","nA","nC/°C","u.a."],X_UNITS=[
 function unitInfo(ds){
   if(ds.kind==="lecturas")return{label:ds.readUnit||"u.a.",method:"none",factor:1,note:"Lecturas ya integradas en el archivo."};
   const y=ds.yUnit,x=ds.xUnit,b=toNum(ds.beta);
-  if(y==="cuentas por canal")return{label:"cuentas",method:"sum",factor:1,note:"Se suman los canales."};
+  if(ds.pairs&&y==="cuentas/°C")return{label:"cuentas",method:"trapz",factor:1,note:"Se integra contra la temperatura de cada lectura (regla del trapecio), como en el análisis en Python."};
+  if(y==="cuentas por canal")return{label:"cuentas",method:"sum",factor:1,note:ds.pairs?"Se suman los puntos de la curva, sin pesar por la temperatura.":"Se suman los canales."};
   if(y==="cuentas/°C"&&x==="°C")return{label:"cuentas",method:"trapz",factor:1,note:"(cuentas/°C) × °C = cuentas"};
   if(y==="nC/°C"&&x==="°C")return{label:"nC",method:"trapz",factor:1,note:"(nC/°C) × °C = nC"};
   if(y==="nA"&&x==="s")return{label:"nC",method:"trapz",factor:1,note:"nA × s = nC"};
@@ -720,6 +745,49 @@ const yLabel=ds=>"Intensidad ("+ds.yUnit+")";
 /* ---------- lectura de archivos ---------- */
 /* ---------- importación, vista previa y limpieza ---------- */
 let pid=0;
+/* lecturas dobles (L1 y L2) por dosímetro: dos filas por lectura, temperatura y señal canal por canal */
+const PAIR_RE=/^(?:c[_\s-]+)?(.+?)[_\s-]*l\s*([12])\s*([a-z]?)$/i;
+const cleanLab=v=>String(v??"").replace(/["']/g,"").trim();
+function detectPairRows(rows){const R=[];let i=0;
+  while(i<rows.length-1){const a=rows[i],b=rows[i+1],la=a&&cleanLab(a[0]),lb=b&&cleanLab(b[0]);
+    if(la&&la===lb&&PAIR_RE.test(la)){const tt=a.slice(1).map(toNum),tv=tt.filter(v=>v!=null),md=tv.length?median(tv):0;
+      if(tv.length>=10&&md>15&&md<600){R.push({label:la,t:tt,y:b.slice(1).map(toNum)});i+=2;continue}}
+    i++}
+  return R.length>=4?R:null}
+function pairsBuild(R,useFirst){const G=new Map();
+  R.forEach(r=>{const m=r.label.match(PAIR_RE),base=m[1].replace(/^[_\s-]+|[_\s-]+$/g,""),rep=(m[3]||"").toUpperCase();
+    if(!G.has(base))G.set(base,new Map());const S=G.get(base);if(!S.has(rep))S.set(rep,[]);S.get(rep).push({...r,k:+m[2]})});
+  const sess=L=>{let l1=L.find(x=>x.k===1)||L[0],l2=L.find(x=>x!==l1&&x.k===2),order=false;if(!l2&&L.length>1){l2=L.find(x=>x!==l1);order=true}
+    const n=Math.max(l1.y.length,l2?l2.y.length:0),net=[],tt=[];let s1=0,s2=0;
+    for(let i=0;i<n;i++){const a=l1.y[i],b=l2?l2.y[i]:0,ti=l1.t[i];if(a==null||b==null||ti==null){net.push(null);tt.push(null);continue}net.push(a-b);tt.push(ti);s1+=a;s2+=b}
+    while(net.length&&net[net.length-1]==null){net.pop();tt.pop()}
+    return{l1,l2,order,net,t:tt,s1,s2:l2?s2:null}};
+  const out=[],notes={order:[],single:[],reps:[]};
+  G.forEach((S,base)=>{const keys=[...S.keys()],all=keys.map(k=>({serie:k,...sess(S.get(k))}));if(keys.length>1)notes.reps.push(base);
+    const pick=useFirst?all[0]:all[all.length-1];if(pick.order)notes.order.push(base);if(pick.s2==null)notes.single.push(base);
+    out.push({name:base,...pick,series:all.map(a=>({serie:a.serie,neta:a.s1-(a.s2||0),s1:a.s1,s2:a.s2}))})});
+  return{out,notes}}
+function pairsFill(p,useFirst){const B=pairsBuild(p.rawPairs,useFirst),ids=B.out.map(o=>o.name),n=amax(B.out.map(o=>o.net.length));
+  p.header=["Punto",...ids];p.ncol=ids.length+1;p.data=Array.from({length:n},(_,k)=>[k,...B.out.map(o=>o.net[k]??null)]);p.temps=B.out.map(o=>o.t);
+  p.pairs=B.out.map(o=>({serie:o.serie,s1:o.s1,s2:o.s2,neta:o.s1-(o.s2||0),res:o.s2!=null&&o.s1>0?o.s2/o.s1*100:null,n1:o.l1.label,n2:o.l2?o.l2.label:null,order:o.order,series:o.series}));p.pairNotes=B.notes}
+function parsePairs(R,file,sheet){const p={pid:++pid,file,sheet,fmt:"barrido",pairFmt:true,rawPairs:R,kind:"curvas",xUnit:"canal",include:true,opts:{},emptyRows:0,sweep:{}};
+  pairsFill(p,false);prepScan(p);p.report=p.report.filter(r=>r.k!=="neg");const N=p.pairNotes,lst=a=>a.slice(0,6).map(normName).join(", ")+(a.length>6?` y ${a.length-6} más`:"");
+  p.report.unshift({k:"pairs",label:"Lecturas dobles reconocidas",n:p.pairs.length,desc:`Cada dosímetro trae una primera y una segunda lectura (L1 y L2), cada una con su propia temperatura punto por punto. Se resta L2 a L1 punto por punto y la lectura neta se integra contra la temperatura (regla del trapecio), igual que en tu análisis en Python.`,auto:true});
+  if(N.reps.length)p.report.push({k:"useFirst",label:"Dosímetros leídos otra vez (serie repetida)",n:N.reps.length,desc:`${lst(N.reps)} tienen una segunda serie de lecturas. Se usa la repetición, que suele hacerse cuando la primera falló; marca la casilla para usar la primera serie.`,auto:false});
+  if(N.order.length)p.report.push({k:"pairOrder",label:"Segunda lectura con el mismo nombre",n:N.order.length,desc:`En ${lst(N.order)} las dos lecturas se llaman igual; se tomó la segunda como L2 por su orden.`,auto:true});
+  if(N.single.length)p.report.push({k:"pairSingle",label:"Dosímetros con una sola lectura",n:N.single.length,desc:`${lst(N.single)} no tienen segunda lectura; se usa la primera sin restar.`,auto:true});
+  if(!("useFirst" in p.opts))p.opts.useFirst=false;return p}
+function pairCross(list){const pp=list.find(p=>p.pairFmt);if(!pp)return;const byN={};pp.header.slice(1).forEach((h,i)=>byN[normName(h)]=pp.pairs[i]);
+  list.forEach(p=>{if(p===pp||p.file!==pp.file)return;
+    if(p.pairCopy){p.note=`Esta hoja repite en columnas las lecturas de la hoja ${pp.sheet}. No se incluye para no duplicar datos.`;return}
+    if(p.kind!=="curvas")return;let n=0,ok=0;const other=[],bad=[];
+    for(let j=1;j<p.ncol;j++){const nm=normName(hdrOf(p,j)),q=byN[nm];if(!q)continue;n++;const s=p.data.reduce((a,r)=>a+(toNum(r[j])||0),0),near=v=>Math.abs(s-v)<=Math.max(1,Math.abs(v)*.005);
+      if(near(q.neta))ok++;else{const alt=q.series.find(a=>near(a.neta));if(alt)other.push(`${nm} (usaste la serie ${alt.serie||"original"}: ${sci(alt.neta)}; la app usa ${q.serie?"la serie "+q.serie:"la original"}: ${sci(q.neta)})`);
+        else{let tw=null,bd=Infinity;Object.entries(byN).forEach(([k,o])=>{if(k===nm)return;o.series.forEach(a=>{const dd=Math.abs(s-a.neta);if(dd<bd){bd=dd;tw=[k]}})});if(!(bd<=Math.max(1,Math.abs(s)*1e-6)))tw=null;bad.push(tw?`${nm} (es igual a la resta de ${tw[0]}; probablemente la fórmula se copió de esa columna)`:nm)}}}
+    if(n<Math.max(4,(p.ncol-1)*.6))return;p.include=false;p.manual=true;
+    const d=[other.length?`Difieren: ${other.join("; ")}.`:"",bad.length?`No corresponden a su propio par: ${bad.join("; ")}.`:""].join(" ");
+    p.report.unshift({k:"manual",label:"Resta hecha a mano",n:ok,desc:`Esta hoja parece la resta L1 − L2 hecha en Excel. Coincide con la calculada en la hoja ${esc(pp.sheet)} en ${ok} de ${n} dosímetros. ${d} No se incluye para no duplicar datos.`,auto:true});
+    pp.report.splice(1,0,{k:"valid",label:"Comparación con tu resta manual",n:ok,desc:`La hoja ${esc(p.sheet)} coincide con la lectura neta en ${ok} de ${n} dosímetros. ${d}`,auto:true})})}
 function parseSweep(rows,hb,file,sheet){
   const H=rows[hb].map(v=>v==null?"":String(v).trim()),ct=H.findIndex(h=>/^(curve\s*type|tipo\s*de\s*curva)$/i.test(h));
   let roi=H.findIndex(h=>/^(roi|dos[ií]metro|id)\b/i.test(h));if(roi<0)roi=Math.max(0,ct-1);
@@ -734,12 +802,15 @@ function parseSweep(rows,hb,file,sheet){
     data:ch.map((_,k)=>[k,...ids.map(id=>G.get(id).c[k])]),temps:ids.map(id=>G.get(id).t||null),
     sweep:{n:ids.length,noT:ids.filter(id=>!G.get(id).t).length,ch:ch.length,other,roiName:H[roi]||"ROI"}};
   prepScan(p);
-  const allT=p.temps.flat().filter(v=>v!=null),tMax=allT.length?Math.max(...allT):0;p.tdec=tMax>600;
+  const allT=p.temps.flat().filter(v=>v!=null),tMax=allT.length?amax(allT):0;p.tdec=tMax>600;
   if(p.tdec){p.report.unshift({k:"tdec",label:"Temperatura sin punto decimal",n:allT.length,desc:`Viene como ${fmt(Math.round(allT[0]),0)} en lugar de ${fmt(allT[0]/10,1)} °C (llega hasta ${fmt(tMax,0)}, o sea ${fmt(tMax/10,0)} °C). Se divide entre 10.`,auto:false});if(!("tdec" in p.opts))p.opts.tdec=true}
   p.report.unshift({k:"sweep",label:"Formato de barrido reconocido",n:ids.length,desc:`Cada dosímetro (${esc(p.sweep.roiName)}) trae una fila de cuentas y otra de temperatura, canal por canal. Se reorganizó en una columna por dosímetro.`,auto:true});
   if(p.sweep.noT)p.report.push({k:"noT",label:"Dosímetros sin fila de temperatura",n:p.sweep.noT,desc:"Se analizan por canal; no tendrán temperatura de pico.",auto:true});
   return p}
 function parseSheet(rows,file,sheet){
+  const pr=detectPairRows(rows);if(pr)return parsePairs(pr,file,sheet);
+  const lr=rows.find(r=>r&&r.filter(c=>typeof c==="string"&&PAIR_RE.test(cleanLab(c))).length>=4);
+  if(lr)return{pid:++pid,file,sheet,kind:"desconocido",include:false,report:[],opts:{},pairCopy:true,note:"Esta hoja trae lecturas L1 y L2 en columnas, sin temperatura por lectura. Usa la hoja exportada por el lector, con dos filas por lectura."};
   const hb=rows.findIndex(r=>r&&r.some(c=>typeof c==="string"&&/^\s*(curve\s*type|tipo\s*de\s*curva)\s*$/i.test(c)));
   if(hb>=0)return parseSweep(rows,hb,file,sheet);
   const total=rows.length;rows=rows.filter(r=>r&&r.some(c=>c!==null&&c!==""));
@@ -748,7 +819,7 @@ function parseSheet(rows,file,sheet){
   let header,data,noHdr=false;
   if(h===-1){header=rows[0].map((_,i)=>i===0?"X":"Columna "+i);data=rows;noHdr=true}
   else{header=rows[h].map(v=>v==null?"":String(v).trim());data=rows.slice(h+1)}
-  const ncol=Math.max(header.length,...data.map(r=>r.length));
+  const ncol=amax(header.length,data.map(r=>r.length));
   const numCol0=data.filter(r=>toNum(r[0])!==null).length;
   const p={pid:++pid,file,sheet,header,data,ncol,noHdr,emptyRows:total-rows.length,include:true,opts:{}};
   if(numCol0>=10&&ncol>=2){p.kind="curvas";const xh=String(header[0]||"").toLowerCase();p.xUnit=/tiempo|time|\(s\)|seg/.test(xh)?"s":/canal|chan/.test(xh)?"canal":"°C"}
@@ -759,24 +830,25 @@ function parseSheet(rows,file,sheet){
 }
 const hdrOf=(p,j)=>(p.header[j]||"").toString().trim()||("Columna "+j);
 function normName(s){s=String(s).trim();const m=s.replace(/\s+/g,"").match(/^tld[-_ ]?0*(\d+)$/i);return m?"TLD"+m[1]:s}
-function spikeIdx(y){const v=y.filter(x=>x!=null),mx=v.length?Math.max(...v):0,out=[];for(let i=2;i<y.length-2;i++){if(y[i]==null)continue;const nb=[y[i-2],y[i-1],y[i+1],y[i+2]].filter(x=>x!=null);if(nb.length<3)continue;const md=median(nb);if(y[i]-md>.05*mx&&y[i]>3*Math.max(md,.01*mx))out.push([i,md])}return out}
-function baseOf(y){const v=y.filter(x=>x!=null);if(v.length<10)return 0;const w=Math.max(3,Math.round(v.length*.05)),b=median(v.slice(0,w)),mx=Math.max(...v);return b>.02*mx?b:0}
+function spikeIdx(y){const v=y.filter(x=>x!=null),mx=v.length?amax(v):0,out=[];for(let i=2;i<y.length-2;i++){if(y[i]==null)continue;const nb=[y[i-2],y[i-1],y[i+1],y[i+2]].filter(x=>x!=null);if(nb.length<3)continue;const md=median(nb);if(y[i]-md>.05*mx&&y[i]>3*Math.max(md,.01*mx))out.push([i,md])}return out}
+function baseOf(y){const v=y.filter(x=>x!=null);if(v.length<10)return 0;const w=Math.max(3,Math.round(v.length*.05)),b=median(v.slice(0,w)),mx=amax(v);return b>.02*mx?b:0}
 function prepScan(p){
   const R=[],add=(k,label,n,desc,def,auto=false)=>{if(n>0){R.push({k,label,n,desc,auto});if(!(k in p.opts))p.opts[k]=auto?true:def}};
   if(p.kind==="curvas"){
     const rowsX=p.data.filter(r=>toNum(r[0])!=null),xs=rowsX.map(r=>toNum(r[0]));
-    let textNum=0,bad=0,neg=0,gaps=0,sp=0,off=0,nm=0;const empty=[],textC=[];
+    let textNum=0,bad=0,neg=0,gaps=0,sp=0,off=0,nm=0,amb=0;const empty=[],textC=[];
     for(let j=1;j<p.ncol;j++){const raw=rowsX.map(r=>r[j]),num=raw.map(toNum),nonE=raw.filter(v=>v!=null&&v!=="").length,nn=num.filter(v=>v!=null).length;
       if(nn===0&&nonE===0){empty.push(j);continue}if(nn<nonE*.5){textC.push(j);continue}
-      raw.forEach((v,i)=>{if(typeof v==="string"&&num[i]!=null)textNum++;if(v!=null&&v!==""&&num[i]==null)bad++;if(num[i]!=null&&num[i]<0)neg++});
+      raw.forEach((v,i)=>{if(isAmbig(v))amb++;if(typeof v==="string"&&num[i]!=null)textNum++;if(v!=null&&v!==""&&num[i]==null)bad++;if(num[i]!=null&&num[i]<0)neg++});
       const f=num.findIndex(v=>v!=null),l=num.length-1-[...num].reverse().findIndex(v=>v!=null);for(let i=f;i<=l;i++)if(num[i]==null)gaps++;
       sp+=spikeIdx(num).length;if(baseOf(num)>0)off++;if(normName(hdrOf(p,j))!==hdrOf(p,j))nm++}
     let unsorted=0;for(let i=1;i<xs.length;i++)if(xs[i]<xs[i-1]){unsorted=1;break}
     const dup=xs.length-new Set(xs).size;
     add("noX","Filas sin temperatura",p.data.length-rowsX.length,"No se pueden ubicar en la curva, así que se quitan.",true,true);
     add("emptyRows","Filas completamente vacías",p.emptyRows,"Se ignoran.",true,true);
-    add("textNum","Números guardados como texto",textNum,'Se convierten a número; por ejemplo "1,25" pasa a 1.25.',true,true);
+    add("textNum","Números guardados como texto",textNum,'Se convierten a número; por ejemplo "1,25" pasa a 1.25 y "1,250.5" a 1250.5.',true,true);
     add("bad","Celdas con texto que no es número",bad,"Se toman como celdas vacías.",true,true);
+    add("ambig","Números con una sola coma",amb,'Valores como "1,234" se leen con coma de miles (1234). Si en tu archivo la coma es decimal, corrígelo en el Excel antes de importar.',true,true);
     add("emptyCols","Columnas vacías",empty.length,"Se eliminan.",true);
     add("textCols","Columnas sin datos numéricos",textC.length,"Por ejemplo notas o comentarios. Se eliminan.",true);
     add("sort","Temperatura desordenada",unsorted,"Se ordenan las filas de menor a mayor temperatura.",true);
@@ -792,6 +864,7 @@ function prepScan(p){
     const names=rr.map(r=>String(r[0]).trim()),dupN=names.length-new Set(names).size,neg=rr.filter(r=>toNum(r[1])<0).length,nm=names.filter(n=>normName(n)!==n).length;
     add("emptyRows","Filas vacías o sin nombre",p.data.length-rr.length+p.emptyRows,"Se ignoran.",true,true);
     add("textNum","Números guardados como texto",txt,"Se convierten a número.",true,true);
+    const amb=rr.filter(r=>isAmbig(r[1])).length;add("ambig","Números con una sola coma",amb,'Valores como "1,234" se leen con coma de miles (1234). Si en tu archivo la coma es decimal, corrígelo en el Excel antes de importar.',true,true);
     add("bad","Lecturas que no son número",badV,"Se quitan esas filas.",true,true);
     add("dupN","Nombres repetidos",dupN,"Se conserva la primera aparición de cada nombre.",true);
     add("neg","Lecturas negativas",neg,"Se pueden llevar a 0.",false);
@@ -802,7 +875,7 @@ function prepScan(p){
   p.report=R;
 }
 function buildFromPending(p){
-  const o=p.opts,log=[];
+  const o=p.opts,log=[];if(p.pairFmt)pairsFill(p,!!o.useFirst);
   if(p.kind==="lecturas"){let rr=p.data.filter(r=>r[0]!=null&&r[0]!==""&&toNum(r[1])!=null).map(r=>({name:String(r[0]).trim(),value:toNum(r[1])}));
     if(o.dupN){const s=new Set();rr=rr.filter(r=>s.has(r.name)?false:(s.add(r.name),true))}
     if(o.neg)rr.forEach(r=>{if(r.value<0)r.value=0});if(o.names)rr.forEach(r=>r.name=normName(r.name));
@@ -820,7 +893,8 @@ function buildFromPending(p){
   if(o.names)cols.forEach(c=>c.name=normName(c.name));
   p.report.filter(r=>o[r.k]).forEach(r=>log.push(`${r.label}: ${r.n}`));
   if(p.fmt==="barrido"){const tf=o.tdec?.1:1;cols.forEach(c=>{const tt=p.temps[c.src-1];c.t=tt?x.map(ch=>{const v=tt[Math.round(ch)];return v==null?null:v*tf}):null});
-    return{kind:"curvas",file:p.file,sheet:p.sheet,x,cols,warns:[],clean:log,xUnit:"canal",yUnit:"cuentas por canal",fixedUnits:true,hasT:cols.some(c=>c.t)}}
+    const pairs=p.pairFmt?Object.fromEntries(cols.map(c=>[c.name,p.pairs[c.src-1]])):undefined;
+    return{kind:"curvas",file:p.file,sheet:p.sheet,x,cols,warns:[],clean:log,xUnit:"canal",yUnit:p.pairFmt?"cuentas/°C":"cuentas por canal",fixedUnits:true,hasT:cols.some(c=>c.t),pairs}}
   return{kind:"curvas",file:p.file,sheet:p.sheet,x,cols,warns:[],clean:log,xUnit:p.xUnit}
 }
 let uid=0;
@@ -832,12 +906,14 @@ async function readFiles(list){
   for(const f of list){Loader.step(`Abriendo ${f.name}`);await sleep(260);
     if(/\.json$/i.test(f.name)){try{loadProject(JSON.parse(await f.text()));project=true}catch(e){toast("Ese archivo no es un proyecto de TLD Analytics")}continue}
     try{const wb=XLSX.read(await f.arrayBuffer(),{type:"array"});
-      for(const sh of wb.SheetNames){const p=parseSheet(XLSX.utils.sheet_to_json(wb.Sheets[sh],{header:1,raw:true,defval:null}),f.name,sh);if(p)pend.push(p)}}
-    catch(e){pend.push({pid:++pid,file:f.name,sheet:"—",kind:"desconocido",include:false,report:[],opts:{},err:e.message})}}
+      const mine=[];for(const sh of wb.SheetNames){const p=parseSheet(XLSX.utils.sheet_to_json(wb.Sheets[sh],{header:1,raw:true,defval:null}),f.name,sh);if(p){pend.push(p);mine.push(p)}}pairCross(mine);
+      if(!mine.length)pend.push({pid:++pid,file:f.name,sheet:"—",kind:"desconocido",include:false,report:[],opts:{},note:"El archivo está vacío: ninguna hoja tiene datos."})}
+    catch(e){pend.push({pid:++pid,file:f.name,sheet:"—",kind:"desconocido",include:false,report:[],opts:{},err:e.message,note:"No se pudo abrir: el archivo está dañado o no es un Excel."})}}
   if(project&&!pend.length){Loader.step("Recalculando resultados");warm();await Loader.done("Proyecto abierto");go("home");return}
   Loader.step("Buscando datos que limpiar");await sleep(380);
   const issues=pend.reduce((s,p)=>s+(p.report||[]).length,0);
-  await Loader.done(issues?`Encontré ${issues} cosa${issues===1?"":"s"} que revisar`:"Los datos se ven limpios");
+  const usable=pend.some(p=>p.kind!=="desconocido");
+  await Loader.done(!usable?"No encontré datos que analizar":issues?`Encontré ${issues} cosa${issues===1?"":"s"} que revisar`:"Los datos se ven limpios");
   S.pend=pend;go("prep");
 }
 async function importPending(){
@@ -856,6 +932,9 @@ function renderPrep(v){
   const P=S.pend||[];if(!P.length){go("home");return}
   const ok=P.filter(p=>p.kind!=="desconocido"),issues=ok.reduce((s,p)=>s+p.report.filter(r=>!r.auto||r.k!=="hdr").length,0);
   setTool("Vista previa",`${P.length} hoja${P.length===1?"":"s"} leída${P.length===1?"":"s"}`);
+  if(!ok.length){v.innerHTML=`${band("Antes de analizar","No encontré datos que analizar",
+    `${P.length===1?"El archivo no tiene":"Ninguno de los archivos tiene"} curvas de brillo ni lecturas que el programa reconozca. Revisa que sea el archivo que exporta el lector, con una columna de temperatura o tiempo y una columna por dosímetro, o una lista de dosímetros con su lectura.`,
+    [{label:"Volver",pri:true,fill:true,fn:()=>{S.pend=[];okSets().length?go("home"):showStart()}}])}${P.map((p,i)=>prepCard(p,i)).join("")}`;bindBand(v);return}
   v.innerHTML=`${band("Antes de analizar",issues?`Encontré ${issues} cosa${issues===1?"":"s"} que se pueden limpiar`:"Tus datos ya vienen limpios",
     issues?"Revisa cada hoja y elige qué correcciones aplicar. Tus archivos originales no se modifican: la limpieza solo vive aquí.":"No encontré filas vacías, texto en lugar de números ni huecos. Se nota que tu programa anterior ya hizo la limpieza.",
     [{label:`Importar ${ok.filter(p=>p.include).length} hoja${ok.filter(p=>p.include).length===1?"":"s"}`,pri:true,fill:true,fn:importPending},{label:"Cancelar",fn:()=>{S.pend=[];go("home")}}])}
@@ -868,12 +947,12 @@ function renderPrep(v){
   P.forEach((p,i)=>{if(p.kind==="curvas"&&p.include)drawPrev(i)});
 }
 function prepCard(p,i){
-  if(p.kind==="desconocido")return`<div class="card"><div class="ch"><h3>${esc(p.file)}${p.sheet?`, hoja ${esc(p.sheet)}`:""}</h3><span class="tag bad">No reconocida</span></div><p class="muted">${p.err?"No se pudo abrir: "+esc(p.err):"No encontré una columna de temperatura ni una tabla de lecturas en esta hoja. Si tiene datos, revisa que la primera columna sea la temperatura o el nombre del dosímetro."}</p></div>`;
+  if(p.kind==="desconocido")return`<div class="card"><div class="ch"><h3>${esc(p.file)}${p.sheet?`, hoja ${esc(p.sheet)}`:""}</h3><span class="tag bad">No reconocida</span></div><p class="muted">${p.err?"No se pudo abrir: "+esc(p.err):p.note?esc(p.note):"No encontré una columna de temperatura ni una tabla de lecturas en esta hoja. Si tiene datos, revisa que la primera columna sea la temperatura o el nombre del dosímetro."}</p></div>`;
   const fix=p.report.filter(r=>!r.auto),auto=p.report.filter(r=>r.auto);
   const showC=Math.min(p.ncol,8),showR=Math.min(p.data.length,12);
   const numCols=[];for(let j=1;j<p.ncol;j++)if(!(p.emptyIdx||[]).includes(j)&&!(p.textIdx||[]).includes(j))numCols.push(j);
   if(p.pcol==null)p.pcol=numCols[0]||1;
-  return`<div class="card prep"><div class="ch"><div><h3>${esc(p.file)}${p.sheet?`<span class="muted" style="font-weight:500">, hoja ${esc(p.sheet)}</span>`:""}</h3><div class="sub">${p.kind==="curvas"?`Curvas de brillo: ${p.nCols} dosímetros, ${p.nRows} ${p.fmt==="barrido"?"canales":"temperaturas"}`:`Lecturas integradas: ${p.nRows} dosímetros`}</div></div>
+  return`<div class="card prep"><div class="ch"><div><h3>${esc(p.file)}${p.sheet?`<span class="muted" style="font-weight:500">, hoja ${esc(p.sheet)}</span>`:""}</h3><div class="sub">${p.kind==="curvas"?`Curvas de brillo: ${p.nCols} dosímetros, ${p.nRows} ${p.pairFmt?`puntos de temperatura (${fmt(amin(p.temps.flat().filter(v=>v!=null)),0)} a ${fmt(amax(p.temps.flat().filter(v=>v!=null)),0)} °C)`:p.fmt==="barrido"?"canales":"temperaturas"}`:`Lecturas integradas: ${p.nRows} dosímetros`}</div></div>
    <div style="display:flex;gap:10px;align-items:center">${p.report.length?`<span class="tag warn">${p.report.length} punto${p.report.length===1?"":"s"} por revisar</span>`:`<span class="tag ok">Limpia</span>`}<label class="sw"><input type="checkbox" data-pinc="${i}"${p.include?" checked":""}><span></span>Incluir</label></div></div>
    ${p.include?`<div class="cols"><div class="s5" style="display:grid;gap:10px;align-content:start">
      ${p.report.length?`${fix.length?`<b style="font-size:12px;color:var(--fg2)">Correcciones que puedes elegir</b>${fix.map(r=>`<label class="fixrow"><span class="sw"><input type="checkbox" data-popt="${i}|${r.k}"${p.opts[r.k]?" checked":""}><span></span></span><span class="t"><b>${r.label} <em>${r.n}</em></b><span>${r.desc}</span></span></label>`).join("")}`:""}
@@ -881,22 +960,22 @@ function prepCard(p,i){
      :learn(`<b>No hay nada que corregir.</b> Sin filas vacías, sin texto en lugar de números, sin huecos y con la temperatura ordenada. Esta hoja ya está lista para la estadística.`)}
    </div><div class="s7" style="display:grid;gap:10px;align-content:start">
      <div class="tw pv" style="max-height:300px"><table><thead><tr>${Array.from({length:showC},(_,j)=>`<th>${esc(hdrOf(p,j))}</th>`).join("")}</tr></thead><tbody>${p.data.slice(0,showR).map(r=>`<tr>${Array.from({length:showC},(_,j)=>{const c=r[j],k=p.kind==="lecturas"&&j===0?"":cellCls(c,j);return`<td class="${p.kind==="lecturas"&&j===0?"id":"n"} ${k}">${c==null||c===""?"":esc(typeof c==="number"?fmtBig(c):c)}</td>`}).join("")}</tr>`).join("")}</tbody></table></div>
-     <div class="hint">${p.fmt==="barrido"?`Mostrando ${showR} de ${p.data.length} canales y ${showC-1} de ${p.ncol-1} dosímetros, ya reorganizados en una columna por dosímetro.`:`Mostrando ${showR} de ${p.data.length} filas y ${showC} de ${p.ncol} columnas, tal como vienen en el archivo.`}</div>
+     <div class="hint">${p.fmt==="barrido"?`Mostrando ${showR} de ${p.data.length} ${p.pairFmt?"puntos":"canales"} y ${showC-1} de ${p.ncol-1} dosímetros, ya reorganizados en una columna por dosímetro.`:`Mostrando ${showR} de ${p.data.length} filas y ${showC} de ${p.ncol} columnas, tal como vienen en el archivo.`}</div>
      ${p.kind==="curvas"?`<div class="ch"><b style="font-size:12.5px">Antes y después</b><select data-pcol="${i}" aria-label="Columna para comparar">${numCols.map(j=>`<option value="${j}"${j===p.pcol?" selected":""}>${esc(hdrOf(p,j))}</option>`).join("")}</select></div><div class="chart short" id="pv${i}"></div>`:""}
    </div></div>`:`<p class="muted">Esta hoja no se va a importar.</p>`}</div>`;
 }
 function drawPrev(i){const p=S.pend[i],id="pv"+i;if(!document.getElementById(id))return;if(charts[id]){charts[id].dispose();delete charts[id]}
-  const t=T(),j=p.pcol,before=p.data.map(r=>[toNum(r[0]),toNum(r[j])]).filter(q=>q[0]!=null);const ds=buildFromPending(p),c=ds.cols.find(c=>c.src===j);
-  const after=c?ds.x.map((x,k)=>[x,c.y[k]]):[];
-  mount(id,()=>base({legend:{show:true,data:["Como viene","Después de limpiar"]},grid:{left:14,right:18,top:30,bottom:56,containLabel:true},tooltip:{trigger:"axis",valueFormatter:v=>sci(v)},xAxis:ax(xLabel({xUnit:p.xUnit}),"value",true,{min:"dataMin",max:"dataMax"}),yAxis:ax("Intensidad","value",false,{axisLabel:{color:t.mu,fontSize:10.5,formatter:sci}}),
+  const t=T(),j=p.pcol,tp=p.pairFmt?p.temps[j-1]:null,before=p.data.map((r,k)=>[tp?tp[k]:toNum(r[0]),toNum(r[j])]).filter(q=>q[0]!=null);const ds=buildFromPending(p),c=ds.cols.find(c=>c.src===j);
+  const after=c?ds.x.map((x,k)=>[tp&&c.t?c.t[k]:x,c.y[k]]).filter(q=>q[0]!=null):[];
+  mount(id,()=>base({legend:{show:true,data:["Como viene","Después de limpiar"]},grid:{left:14,right:18,top:30,bottom:56,containLabel:true},tooltip:{trigger:"axis",valueFormatter:v=>sci(v)},xAxis:ax(p.pairFmt?"Temperatura (°C)":xLabel({xUnit:p.xUnit}),"value",true,{min:"dataMin",max:"dataMax"}),yAxis:ax("Intensidad","value",false,{axisLabel:{color:t.mu,fontSize:10.5,formatter:sci}}),
     series:[{name:"Como viene",type:"line",data:before,showSymbol:false,connectNulls:false,lineStyle:{color:t.mu,width:1.2,type:"dashed"},itemStyle:{color:t.mu}},{name:"Después de limpiar",type:"line",data:after,showSymbol:false,lineStyle:{color:t.azul,width:2},itemStyle:{color:t.azul},areaStyle:{color:t.band}}]},{zoom:false,tool:false}))}
 function warm(){okSets().forEach(d=>{d.rol==="lote"?analyzeLote(d):analyzeCal(d)});lectores().forEach(checksFor)}
 function projectJSON(){return JSON.stringify({app:"TLD Analytics",autor:"Jesús Morelos",version:1,guardado:new Date().toISOString(),criterios:S.settings,dosis:S.doses,
   conjuntos:S.datasets.filter(d=>d.kind!=="desconocido").map(d=>({id:d.id,archivo:d.file,hoja:d.sheet,lector:d.lector,tipo:d.rol,formato:d.kind,unidadY:d.yUnit,unidadX:d.xUnit,beta:d.beta,unidadLectura:d.readUnit,
-    x:d.x,hasT:d.hasT,fixedUnits:d.fixedUnits,curvas:d.cols?.map(c=>({nombre:c.name,y:c.y,t:c.t||null})),lecturas:d.readings}))})}
+    x:d.x,hasT:d.hasT,fixedUnits:d.fixedUnits,pares:d.pairs||null,curvas:d.cols?.map(c=>({nombre:c.name,y:c.y,t:c.t||null})),lecturas:d.readings}))})}
 function loadProject(p){if(p.app!=="TLD Analytics")throw 0;uid=0;memo.clear();
   S.datasets=p.conjuntos.map(c=>{const d={id:c.id,file:c.archivo,sheet:c.hoja,lector:c.lector,rol:c.tipo,kind:c.formato,yUnit:c.unidadY,xUnit:c.unidadX,beta:c.beta||"",readUnit:c.unidadLectura,warns:[]};
-    if(c.formato==="curvas"){d.x=c.x;d.hasT=c.hasT;d.fixedUnits=c.fixedUnits;d.cols=c.curvas.map(k=>({name:k.nombre,y:k.y,t:k.t||null}))}else d.readings=c.lecturas;uid=Math.max(uid,+String(c.id).replace(/\D/g,"")||0);return d});
+    if(c.formato==="curvas"){d.x=c.x;d.hasT=c.hasT;d.fixedUnits=c.fixedUnits;if(c.pares)d.pairs=c.pares;d.cols=c.curvas.map(k=>({name:k.nombre,y:k.y,t:k.t||null}))}else d.readings=c.lecturas;uid=Math.max(uid,+String(c.id).replace(/\D/g,"")||0);return d});
   S.settings={...S.settings,...p.criterios};S.doses=p.dosis||{};S.sample=false;S.chat=[];S.insp=null}
 
 /* ---------- cálculo ---------- */
@@ -909,20 +988,26 @@ function readingsOf(ds){return cached(ds,"read",()=>{
   if(ds.kind==="lecturas")return ds.readings.map(r=>({name:r.name,num:tldNum(r.name),value:r.value,points:null,peakT:null,curve:null}));
   return ds.cols.map(c=>{const pts=[];for(let i=0;i<ds.x.length;i++)if(ds.x[i]!=null&&c.y[i]!=null)pts.push([ds.x[i],c.y[i],c.t?c.t[i]:null]);
     pts.sort((a,b)=>a[0]-b[0]);const x=pts.map(p=>p[0]),y=pts.map(p=>p[1]);let value=null,peakT=null,peakY=null,peakI=null;
-    if(pts.length>=5){value=(u.method==="sum"?y.reduce((s,v)=>s+v,0):trapz(x,y))*u.factor;
+    if(pts.length>=5){const own=u.method==="trapz"&&ds.pairs&&c.t;value=(u.method==="sum"?y.reduce((s,v)=>s+v,0):own?(q=>trapz(q.map(p=>p[2]),q.map(p=>p[1])))(c.y.map((v,i)=>[i,v,c.t[i]]).filter(p=>p[1]!=null&&p[2]!=null)):trapz(x,y))*u.factor;
       let best=-Infinity;for(let i=2;i<y.length-2;i++){const s=(y[i-2]+y[i-1]+y[i]+y[i+1]+y[i+2])/5;if(s>best){best=s;peakI=i;peakY=s}}
       if(peakI!=null)peakT=c.t?pts[peakI][2]:x[peakI]}
     return{name:c.name,num:tldNum(c.name),value,points:pts.length,peakT,peakY,peakI,curve:pts,tcurve:c.t?pts.filter(p=>p[2]!=null).map(p=>[p[2],p[1]]):null,sig:y.join(",")}})})}
+function pairFlags(r,q,lvl){if(!q)return;
+  if(q.s2==null){r.flags.push({lvl:"warn",t:"Solo tiene una lectura; no se pudo restar la segunda, así que su valor incluye el fondo del lector."});return}
+  if(q.s2>q.s1)r.flags.push({lvl,t:`Su segunda lectura (${sci(q.s2)}) es mayor que la primera (${sci(q.s1)}). Probablemente se intercambiaron las lecturas o los dosímetros.`});
+  else if(q.res>5)r.flags.push({lvl:"warn",t:`La segunda lectura conserva ${fmt(q.res,1)} % de la primera; lo típico es menos de 5 %. Puede ser un borrado incompleto en el lector o una primera lectura muy baja.`});
+  if(q.order)r.flags.push({lvl:"info",t:"Sus dos lecturas tenían el mismo nombre en el archivo; se tomó la segunda como L2 por su orden."})}
 function analyzeLote(ds){return cached(ds,"lote",()=>{
   const st=S.settings,u=unitInfo(ds);
   const rows=readingsOf(ds).map(r=>({...r,flags:[],status:"ok",checks:{}}));
+  if(ds.pairs)rows.forEach(r=>pairFlags(r,ds.pairs[r.name],"bad"));
   rows.forEach(r=>{if(r.value==null){r.flags.push({lvl:"bad",t:r.points!=null?`La columna tiene muy pocos números (${r.points} puntos útiles); no se puede calcular su lectura.`:"No tiene lectura."});r.checks.data=false}else r.checks.data=true});
   const valid=rows.filter(r=>r.value!=null),pre=median(valid.map(r=>r.value));
   valid.forEach(r=>{r.rel0=r.value/pre*100;if(r.value<=0||r.value<pre*st.noSignal/100){r.noSig=true;r.checks.signal=false;r.flags.push({lvl:"bad",t:`Casi no tiene señal: lee ${fmt(Math.max(r.value,0)/pre*100,1)} % de lo típico del lote. Probablemente no se irradió, no se leyó bien o está dañado.`})}else r.checks.signal=true});
   const good=valid.filter(r=>!r.noSig),vals=good.map(r=>r.value);
   const stats={n:rows.length,nGood:good.length,mean:vals.length?mean(vals):NaN,median:vals.length?median(vals):NaN,sd:sd(vals)};stats.cv=stats.sd/stats.mean*100;
   const ref=st.ref==="mean"?stats.mean:stats.median;stats.ref=ref;
-  const bySig={};rows.forEach(r=>{if(r.value==null)return;const key=r.sig&&r.sig.length?r.sig:"v"+r.value;(bySig[key]=bySig[key]||[]).push(r)});
+  const bySig={};rows.forEach(r=>{if(r.value==null||!(r.sig&&r.sig.length))return;(bySig[r.sig]=bySig[r.sig]||[]).push(r)});
   stats.dups=0;rows.forEach(r=>r.checks.dup=true);
   Object.values(bySig).forEach(g=>{if(g.length>1){stats.dups+=g.length;g.forEach(r=>{r.checks.dup=false;r.dupOf=g.filter(o=>o!==r).map(o=>o.name);r.flags.push({lvl:"warn",t:`Su ${r.sig?"curva":"lectura"} es idéntica a la de ${r.dupOf.join(", ")}. Puede ser una columna copiada por error.`})})}});
   const pk=good.filter(r=>r.peakT!=null).map(r=>r.peakT);stats.peak=pk.length?median(pk):null;
@@ -958,6 +1043,7 @@ function analyzeCal(ds){return cached(ds,"cal",()=>{
     Object.values(byD).forEach(g=>{if(g.length<2)return;const m=mean(g.map(p=>p.corr));g.forEach(p=>{const d=(p.corr-m)/m*100;if(Math.abs(d)>S.settings.tol)p.flags.push({lvl:"warn",t:`Recibió la misma dosis que ${g.filter(o=>o!==p).map(o=>o.name).join(", ")} y su lectura difiere ${fmt(Math.abs(d),1)} % del promedio del grupo.`})})});
     const bg=pts.filter(p=>p.dose===0).map(p=>p.corr);fit.ld=bg.length>=2?3*sd(bg)/b:null;
   }
+  if(ds.pairs)rows.forEach(r=>pairFlags(r,ds.pairs[r.name],"warn"));
   rows.forEach(r=>{if(r.loteStatus==="bad")r.flags.push({lvl:"warn",t:`Fue descartado en el lote (${r.ecfFrom}); no conviene usarlo para calibrar.`});
     if(r.value!=null&&r.dose==null)r.flags.push({lvl:"info",t:"Falta la dosis impartida."});
     r.status=r.flags.some(f=>f.lvl==="warn")?"warn":r.dose==null?"na":"ok"});
@@ -969,7 +1055,7 @@ const trumpet=H=>[(1/FT)*(1-2*H0/(H0+H)),FT*(1+H0/(2*H0+H))];
 function checksFor(L){
   const lote=okSets().find(d=>d.lector===L&&d.rol==="lote"),cal=okSets().find(d=>d.lector===L&&d.rol==="cal");const out=[];
   if(lote){const {rows,stats}=analyzeLote(lote);const acc=rows.filter(r=>r.status==="ok").map(r=>r.value),sig=rows.filter(r=>r.value!=null&&!r.noSig).map(r=>r.value);
-    const hom=a=>a.length?(Math.max(...a)-Math.min(...a))/Math.min(...a)*100:NaN,hA=hom(acc),hS=hom(sig);
+    const hom=a=>a.length?(amax(a)-amin(a))/amin(a)*100:NaN,hA=hom(acc),hS=hom(sig);
     out.push({area:"Lote",title:"Homogeneidad del lote",ref:"IEC 61066, citado por el OIEA en su capacitación de validación de dosimetría externa",crit:"Las lecturas no difieren más de 30 % entre dosímetros",val:`${fmt(hA,1)} % con los aceptados; ${fmt(hS,1)} % con todos los que tienen señal`,st:hA<=30?"ok":"bad",why:"Se calcula como (máxima − mínima) ÷ mínima. El criterio original se evalúa a 10 veces el umbral de detección."});
     out.push({area:"Lote",title:"Dispersión de las lecturas",ref:"Criterio de reproducibilidad de IEC 61066 (CV ≤ 7.5 %)",crit:"Coeficiente de variación ≤ 7.5 %",val:`CV ${fmt(stats.cvAcc,2)} % con los aceptados`,st:stats.cvAcc<=7.5?"ok":"bad",why:"En sentido estricto, la reproducibilidad se mide con lecturas repetidas del mismo dosímetro. Aquí se aplica al lote como referencia."});
     const in2=rows.filter(r=>r.dev!=null&&Math.abs(r.dev)<=2).length;
@@ -979,12 +1065,12 @@ function checksFor(L){
   if(cal){const a=analyzeCal(cal);
     if(!a.fit)out.push({area:"Calibración",title:"Recta de calibración",ref:"—",crit:"Al menos dos dosis distintas",val:"Faltan dosis por capturar",st:"na",why:"Captura las dosis en la sección de calibración."});
     else{const irr=a.rows.filter(r=>r.dose>0&&r.corr!=null&&r.resp!=null);if(!irr.length)return out;const resp=irr.map(r=>r.resp),mr=mean(resp);
-      const lin=Math.max(...resp.map(v=>Math.abs(v-mr)/mr*100));
+      const lin=amax(resp.map(v=>Math.abs(v-mr)/mr*100));
       out.push({area:"Calibración",title:"Linealidad de la respuesta",ref:"IEC 61066, citado por el OIEA",crit:"La respuesta por unidad de dosis varía ≤ 10 %",val:`Variación máxima ${fmt(lin,1)} %`,st:lin<=10?"ok":"bad",why:"Respuesta = (lectura corregida − fondo) ÷ dosis, para cada dosímetro irradiado."});
-      const nl=irr.map(r=>(r.resp/a.fit.b-1)*100),nlMin=Math.min(...nl),nlMax=Math.max(...nl);
+      const nl=irr.map(r=>(r.resp/a.fit.b-1)*100),nlMin=amin(nl),nlMax=amax(nl);
       out.push({area:"Calibración",title:"No linealidad",ref:"IEC 62387",crit:"Entre −9 % y +11 % respecto a la recta",val:`De ${pct(nlMin)} a ${pct(nlMax)}`,st:nlMin>=-9&&nlMax<=11?"ok":"bad",why:"Compara la respuesta de cada punto con la pendiente de la recta ajustada."});
       out.push({area:"Calibración",title:"Calidad del ajuste",ref:"Buena práctica (no es norma)",crit:"R² ≥ 0.99",val:`R² = ${fmt(a.fit.r2,4)}`,st:a.fit.r2>=.99?"ok":"warn",why:"Un R² bajo suele indicar una dosis mal capturada o un dosímetro defectuoso."});
-      const mxD=Math.max(...a.rows.filter(r=>r.dose!=null).map(r=>r.dose));
+      const mxD=amax(a.rows.filter(r=>r.dose!=null).map(r=>r.dose));
       out.push({area:"Calibración",title:"Intervalo de dosis",ref:"AAPM TG-191: el TLD es lineal hasta unos 4 a 5 Gy",crit:"Dosis máxima ≤ 4000 mGy, o corregir supralinealidad",val:`Dosis máxima ${fmt(mxD,0)} mGy`,st:mxD<=4000?"ok":"warn",why:"Por encima de ese intervalo hace falta una corrección por supralinealidad."});
       const tp=irr.map(r=>{const R=r.hEval/r.dose,[lo,hi]=trumpet(r.dose);return R>=lo&&R<=hi});const inn=tp.filter(Boolean).length;
       out.push({area:"Calibración",title:"Curva de trompeta",ref:"ISO 14146 (F = 1.5; H₀ = 0.085 mSv)",crit:"Al menos 90 % de los dosímetros dentro de la trompeta",val:`${inn} de ${tp.length} dentro (${fmt(inn/tp.length*100,0)} %)`,st:inn/tp.length>=.9?"ok":"bad",why:"Compara la dosis que la recta le asigna a cada dosímetro con la que realmente recibió. Se asume que 1 mGy ≈ 1 mSv, lo cual vale para fotones."});
@@ -1030,8 +1116,13 @@ function renderView(){
   if(a==="home")renderHome(v);else if(a==="files")renderFiles(v);else if(a==="help")renderHelp(v);else if(a==="cmp")renderCompare(v);
   else if(a==="norm")renderNorms(v);else if(a==="ask")renderAsk(v);else if(a==="insp")renderInsp(v);else if(a==="prep")renderPrep(v);
   else{const ds=S.datasets.find(d=>d.id===a);if(!ds)return go("home");ds.rol==="cal"?renderCal(v,ds):renderLote(v,ds)}
-  countUps(v);
+  countUps(v);a11yFix(v);
 }
+function a11yFix(v){
+  if(v.id==="view"&&!v.querySelector("h2")&&v.querySelector("h3"))v.insertAdjacentHTML("afterbegin",`<h2 class="vh">${esc($("#tTitle")?.textContent||"Contenido")}</h2>`);
+  v.querySelectorAll("th").forEach(th=>{if(!th.textContent.trim()&&!th.getAttribute("aria-label"))th.insertAdjacentHTML("beforeend",'<span class="vh">Acciones</span>')});
+  if(v.id==="view"){const c=$("#content");if(c){if(v.querySelector('button,a[href],input,select,textarea,[tabindex="0"]'))c.removeAttribute("tabindex");else c.tabIndex=0}}
+  requestAnimationFrame(()=>v.querySelectorAll(".list,.tw,.formula").forEach(l=>{if(l.hasAttribute("tabindex"))return;if(l.scrollHeight>l.clientHeight+2||l.scrollWidth>l.clientWidth+2){l.tabIndex=0;if(l.tagName==="DIV")l.setAttribute("role","region");l.setAttribute("aria-label",l.classList.contains("formula")?"Fórmula, desplazable":(l.closest(".card,.xp,section")?.querySelector("h2,h3")?.textContent||"Lista")+", desplazable")}}))}
 function openInsp(dsId,name){S.insp={ds:dsId,name};go("insp")}
 function countUps(root){if(RM)return;root.querySelectorAll("[data-count]").forEach(el=>{const to=+el.dataset.count,d=+(el.dataset.dec||0),t0=performance.now();
   const step=t=>{const k=Math.min(1,(t-t0)/700),e=1-Math.pow(1-k,3);el.textContent=fmt(to*e,d);if(k<1)requestAnimationFrame(step)};requestAnimationFrame(step)})}
@@ -1055,12 +1146,12 @@ function wireX(v,XP){
   const open=key=>{kp.querySelectorAll(".kpi").forEach(k=>k.classList.toggle("open",k.dataset.x===key));killX();
     if(!key){panel.classList.remove("open");S.xp=null;return}
     S.xp=key;const r=XP[key]();$("#xpIn").innerHTML=`<div class="xh"><h3>${r.title}</h3><button class="btn" id="xpClose">Cerrar</button></div>${r.html}`;
-    panel.classList.add("open");$("#xpClose").onclick=()=>open(null);wireCommon($("#xpIn"));
+    panel.classList.add("open");$("#xpClose").onclick=()=>open(null);wireCommon($("#xpIn"));a11yFix($("#xpIn"));
     $("#xpIn").querySelectorAll("[data-tchip]").forEach(c=>c.onclick=()=>{const[d,n]=c.dataset.tchip.split("|");openInsp(d,n)});
     requestAnimationFrame(()=>{r.after&&r.after();countUps($("#xpIn"))});
     setTimeout(()=>{const b=panel.getBoundingClientRect();if(b.bottom>innerHeight)panel.scrollIntoView({behavior:RM?"auto":"smooth",block:"nearest"})},420)};
-  kp.querySelectorAll(".kpi[data-x]").forEach(k=>{k.tabIndex=0;k.setAttribute("role","button");k.setAttribute("aria-label",(k.querySelector(".k")?.textContent||"")+", ver detalle");
-    const f=e=>{if(e.target.closest("[data-help]"))return;open(S.xp===k.dataset.x?null:k.dataset.x)};k.onclick=f;k.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();f(e)}}});
+  kp.querySelectorAll(".kpi[data-x]").forEach(k=>{const hb=document.createElement("button");hb.className="kpi-hit";hb.type="button";hb.setAttribute("aria-label",(k.querySelector(".k")?.textContent||"").replace("?","").trim()+", ver detalle");hb.setAttribute("aria-expanded",S.xp===k.dataset.x);k.prepend(hb);
+    const f=e=>{if(e.target.closest("[data-help]"))return;open(S.xp===k.dataset.x?null:k.dataset.x);kp.querySelectorAll(".kpi-hit").forEach(b=>b.setAttribute("aria-expanded",b.parentNode.dataset.x===S.xp))};k.onclick=f});
   if(S.xp&&XP[S.xp])open(S.xp);return open;
 }
 let BAND=[];
@@ -1145,7 +1236,7 @@ function dataTable(host,cfg){
   const exportRows=()=>host._rows.map(r=>Object.fromEntries(vis().filter(c=>c.type!=="devbar"&&c.type!=="input").map(c=>[c.plain||c.label,c.type==="tag"?stName(r[c.k]):c.type==="why"?(r[c.k]||[]).join(" "):r[c.k]??null])));
   host.querySelector("[data-copy]").onclick=()=>{const rs=exportRows();copyTSV([Object.keys(rs[0]||{}),...rs.map(o=>Object.values(o))])};
   host.querySelector("[data-json]").onclick=()=>save((cfg.file||"tabla")+".json",JSON.stringify(exportRows(),null,2));
-  host.querySelector("[data-csv]").onclick=()=>{const rs=exportRows(),q=v=>`"${String(v??"").replace(/"/g,'""')}"`;save((cfg.file||"tabla")+".csv","﻿"+[Object.keys(rs[0]||{}).map(q).join(","),...rs.map(o=>Object.values(o).map(q).join(","))].join("\n"))};
+  host.querySelector("[data-csv]").onclick=()=>{const rs=exportRows(),q=csvCell;save((cfg.file||"tabla")+".csv","﻿"+[Object.keys(rs[0]||{}).map(q).join(","),...rs.map(o=>Object.values(o).map(q).join(","))].join("\n"))};
   host.querySelector("[data-colsbtn]").onclick=e=>{e.stopPropagation();closeMenu();menuEl=document.createElement("div");menuEl.className="menu";
     menuEl.innerHTML=cfg.cols.map(c=>`<label><input type="checkbox" data-c="${c.k}"${st.hidden.includes(c.k)?"":" checked"}>${c.label}</label>`).join("");document.body.appendChild(menuEl);
     const r=e.currentTarget.getBoundingClientRect();menuEl.style.top=r.bottom+6+"px";menuEl.style.left=Math.max(8,r.right-menuEl.offsetWidth)+"px";
@@ -1201,7 +1292,7 @@ function renderHome(v){
     <div class="kpi" data-x="acc"><span class="k">Aceptados</span><span class="v">${cnt(ok/tot*100)}<small> %</small></span><span class="h">${ok} de ${tot}</span><i class="ring" style="--p:${ok/tot*100};--w:${warn/tot*100}"></i>${more}</div>
     <div class="kpi" data-x="bad"><span class="k">Descartados</span><span class="v" style="color:var(--bad)">${cnt(bad)}</span><span class="h">${warn} más por revisar</span>${more}</div>
     <div class="kpi" data-x="cv"><span class="k">Dispersión ${qm("cv")}</span><span class="v">${cnt(mean(lotes.map(x=>x.a.stats.cvAcc)),2)}<small> %</small></span><span class="h">CV promedio de aceptados</span>${more}</div>
-    <div class="kpi" data-x="r2"><span class="k">Ajuste de calibración ${qm("r2")}</span><span class="v">${r2.length?cnt(Math.min(...r2),3):"—"}</span><span class="h">${r2.length?"R² más bajo":"sin calibración"}</span>${more}</div>
+    <div class="kpi" data-x="r2"><span class="k">Ajuste de calibración ${qm("r2")}</span><span class="v">${r2.length?cnt(amin(r2),3):"—"}</span><span class="h">${r2.length?"R² más bajo":"sin calibración"}</span>${more}</div>
     <div class="kpi" data-x="norm"><span class="k">Criterios normativos</span><span class="v">${cnt(pass)}<small> de ${checks.length}</small></span><div class="meter"><i style="width:${checks.length?pass/checks.length*100:0}%;background:var(--azul)"></i><i style="width:${checks.length?(checks.length-pass)/checks.length*100:0}%;background:var(--bad)"></i></div>${more}</div>
   </div>
   ${stepsHTML()}
@@ -1228,7 +1319,7 @@ function renderHome(v){
   mount("hHist",()=>base({legend:{show:true},grid:{left:14,right:18,top:40,bottom:56,containLabel:true},tooltip:{trigger:"axis",axisPointer:{type:"shadow"}},
     xAxis:ax("Desviación respecto a la mediana (%)","category",true,{data:edges.slice(0,-1).map(e=>fmt(e+1,0)),nameGap:28}),yAxis:ax("Número de dosímetros","value",false),
     series:lotes.map(x=>({name:x.d.lector,type:"bar",barGap:"10%",itemStyle:{color:lcolor(x.d.lector),borderRadius:[4,4,0,0]},emphasis:{focus:"series"},data:edges.slice(0,-1).map((e,i)=>x.a.rows.filter(r=>r.dev!=null&&r.dev>=e&&r.dev<edges[i+1]).length)}))},{name:"respuesta_relativa"}));
-  if(cals.some(x=>x.a.fit)){const mx=Math.max(...cals.flatMap(x=>x.a.rows.filter(r=>r.dose!=null).map(r=>r.dose)))*1.05;
+  if(cals.some(x=>x.a.fit)){const mx=amax(cals.flatMap(x=>x.a.rows.filter(r=>r.dose!=null).map(r=>r.dose)))*1.05;
     mount("hCal",()=>base({legend:{show:true},grid:{left:14,right:18,top:40,bottom:56,containLabel:true},tooltip:{trigger:"item",formatter:p=>p.data.n?tipBox(p.data.n,[["Impartida",fmt(p.value[0],1)+" mGy"],["Evaluada",fmt(p.value[1],1)+" mGy"]]):""},
       xAxis:ax("Dosis impartida (mGy)"),yAxis:ax("Dosis evaluada (mGy)","value",false),
       series:[{name:"Ideal",type:"line",data:[[0,0],[mx,mx]],showSymbol:false,lineStyle:{color:t.mu,type:"dashed",width:1},silent:true},
@@ -1239,7 +1330,7 @@ function heroHTML(lotes,tot,ok,bad,warn,pass,nchk){
   const L=lotes.find(x=>x.d.kind==="curvas");let svg="";
   if(L){const acc=L.a.rows.filter(r=>r.status==="ok"&&r.curve&&r.curve.length);if(acc.length){const xs0=acc[0].curve.map(p=>p[0]);const mm=xs0.map((x,i)=>mean(acc.map(r=>r.curve[i]?.[1]??0)));
     const xs=L.d.hasT?xs0.map((x,i)=>{const a=acc.map(r=>r.curve[i]?.[2]).filter(v=>v!=null);return a.length?mean(a):x}):xs0;
-    const W=600,H=150,base=H-22,mx=Math.max(...mm),x0=xs[0],x1=xs[xs.length-1],st=Math.max(1,Math.floor(xs.length/160));
+    const W=600,H=150,base=H-22,mx=amax(mm),x0=xs[0],x1=xs[xs.length-1],st=Math.max(1,Math.floor(xs.length/160));
     const P=xs.map((x,i)=>[(x-x0)/(x1-x0)*W,base-mm[i]/mx*(base-16)]).filter((_,i)=>i%st===0);const ip=mm.indexOf(mx),px=(xs[ip]-x0)/(x1-x0)*W;
     const u=v=>L.d.xUnit==="°C"||L.d.hasT?fmt(v,0)+" °C":fmt(v,0);
     svg=`<figure class="s0-fig"><svg viewBox="0 0 600 ${H}" role="img" aria-label="Curva de brillo promedio de ${esc(L.d.lector)}"><line class="base" x1="0" y1="${base}" x2="600" y2="${base}"/><line class="pkl" x1="${px}" y1="16" x2="${px}" y2="${base}"/><path class="ln" d="M${P.map(p=>p[0].toFixed(1)+" "+p[1].toFixed(1)).join(" L")}"/><circle class="pkd" cx="${px}" cy="16" r="3.5"/><text x="${Math.min(px+8,540)}" y="20">${u(xs[ip])}</text><text x="0" y="${H-4}">${u(x0)}</text><text x="600" y="${H-4}" text-anchor="end">${u(x1)}</text></svg><figcaption>Curva de brillo promedio de los aceptados, ${esc(L.d.lector)}</figcaption></figure>`}}
@@ -1398,7 +1489,7 @@ function loteDist(v,ds,A){
       xAxis:ax(`Lectura integrada (${U})`,"value",true,{scale:true,axisLabel:{color:t.mu,fontSize:10.5,formatter:sci},splitLine:{show:false}}),yAxis:ax("Número de dosímetros","value",false),
       series:[{name:"Dosímetros",type:"bar",barWidth:"92%",data:B.c.map((c,i)=>[B.e[i]+B.w/2,c]),itemStyle:{color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:t.azul},{offset:1,color:t.cian}]),borderRadius:[4,4,0,0]}},
         {name:"Distribución normal",type:"line",smooth:true,showSymbol:false,data:curve,lineStyle:{color:t.indigo,width:2}}]},{name:"histograma_"+ds.lector})});
-  const q1=dA.q1,q3=dA.q3,iq=q3-q1,wl=Math.min(...vals.filter(x=>x>=q1-1.5*iq)),wh=Math.max(...vals.filter(x=>x<=q3+1.5*iq)),outs=gs.filter(r=>r.value<q1-1.5*iq||r.value>q3+1.5*iq);
+  const q1=dA.q1,q3=dA.q3,iq=q3-q1,wl=amin(vals.filter(x=>x>=q1-1.5*iq)),wh=amax(vals.filter(x=>x<=q3+1.5*iq)),outs=gs.filter(r=>r.value<q1-1.5*iq||r.value>q3+1.5*iq);
   onPick(mount("dBox",()=>base({grid:{left:14,right:18,top:30,bottom:34,containLabel:true},tooltip:{trigger:"item",formatter:p=>p.seriesType==="boxplot"?tipBox("Lote",[["Bigote superior",fmtBig(wh)],["Q3",fmtBig(q3)],["Mediana",fmtBig(dA.median)],["Q1",fmtBig(q1)],["Bigote inferior",fmtBig(wl)]]):tipBox(p.data.n,[["Lectura",fmtBig(p.value[0])+" "+U]])},
     xAxis:ax(`Lectura (${U})`,"value",true,{scale:true,axisLabel:{color:t.mu,fontSize:10.5,formatter:sci}}),yAxis:{type:"category",data:[ds.lector],show:false},
     series:[{type:"boxplot",data:[[wl,q1,dA.median,q3,wh]],boxWidth:[30,46],itemStyle:{color:t.band,borderColor:t.azul,borderWidth:1.6}},{type:"scatter",symbolSize:10,itemStyle:{color:t.bad},data:outs.map(r=>({value:[r.value,ds.lector],n:r.name}))}]},{zoom:"x",name:"caja_"+ds.lector})),p=>p.data?.n?[ds.id,p.data.n]:null);
@@ -1464,7 +1555,8 @@ function renderInsp(v){
   <div class="cols">
     <div class="s8">${r.curve?chartCard("iGlow","Curva de brillo","Comparada con el promedio de los aceptados del lote (banda de ±1σ)","tall"):`<div class="card"><h3>Curva de brillo</h3><p class="muted">Este conjunto solo tiene lecturas integradas, sin curva.</p></div>`}</div>
     <div class="s4 card"><h3>Datos del dosímetro</h3><dl class="kv">
-      <dt>Lectura integrada</dt><dd>${fmtBig(r.value)} ${esc(U)}</dd><dt>Referencia del lote</dt><dd>${fmtBig(stats.ref)} ${esc(U)}</dd>
+      ${ds.pairs&&ds.pairs[r.name]?(q=>`<dt>Primera lectura (L1)</dt><dd>${fmtBig(q.s1)} ${esc(U)}</dd><dt>Segunda lectura (L2)</dt><dd>${q.s2!=null?fmtBig(q.s2)+" "+esc(U):"—"}</dd>${q.res!=null?`<dt>Residual</dt><dd>${fmt(q.res,2)} %</dd>`:""}${q.serie?`<dt>Serie usada</dt><dd>${esc(q.serie)}</dd>`:""}`)(ds.pairs[r.name]):""}
+      <dt>Lectura ${ds.pairs?"neta":"integrada"}</dt><dd>${fmtBig(r.value)} ${esc(U)}</dd><dt>Referencia del lote</dt><dd>${fmtBig(stats.ref)} ${esc(U)}</dd>
       <dt>Diferencia</dt><dd style="color:${r.status==="bad"?"var(--bad)":"inherit"}">${pct(r.dev,2)}</dd><dt>Factor de corrección ${qm("ecf")}</dt><dd>${r.ecf?fmt(r.ecf,4):"—"}</dd>
       <dt>Puntaje z ${qm("z")}</dt><dd>${fmt(r.z,2)}</dd><dt>Percentil ${qm("pctl")}</dt><dd>${r.pctl!=null?fmt(r.pctl,0):"—"}</dd>
       <dt>Lugar en el lote</dt><dd>${r.rank?`${r.rank} de ${stats.nGood}`:"—"}</dd>
@@ -1521,7 +1613,7 @@ function renderCal(v,ds){
   live();
 }
 function calFitChart(id,a,u,ds){const t=T();
-  const pts=a.rows.filter(r=>r.dose!=null&&r.corr!=null),mx=Math.max(...pts.map(p=>p.dose))*1.05;
+  const pts=a.rows.filter(r=>r.dose!=null&&r.corr!=null),mx=amax(pts.map(p=>p.dose))*1.05;
   mount(id,()=>base({tooltip:{trigger:"item",formatter:p=>p.data.n?tipBox(p.data.n,[["Dosis",fmt(p.value[0],1)+" mGy"],["Lectura corregida",fmtBig(p.value[1])+" "+u.label],["Residuo",pct(p.data.res)]]):""},
     xAxis:ax("Dosis impartida (mGy)"),yAxis:ax(`Lectura corregida (${u.label})`,"value",false,{scale:true,axisLabel:{color:t.mu,fontSize:10.5,formatter:sci}}),
     series:[{type:"line",data:[[0,a.fit.a],[mx,a.fit.a+a.fit.b*mx]],showSymbol:false,lineStyle:{color:t.indigo,width:1.8},silent:true},
@@ -1610,10 +1702,7 @@ function renderCompare(v){
 }
 
 /* ---------- asistente ---------- */
-// Integración neutral: la plataforma anfitriona puede exponer window.tldAI.use("sample").
- // Debe devolver una función compatible con (turns, options) y soportar herramientas,
- // respuesta incremental y AbortSignal. El proveedor de IA queda a elección de quien integra la app.
-let sampleFn;async function getSample(){if(sampleFn!==undefined)return sampleFn;try{sampleFn=window.tldAI?.use?await window.tldAI.use("sample"):null}catch(e){sampleFn=null}return sampleFn}
+let sampleFn;async function getSample(){if(sampleFn!==undefined)return sampleFn;try{sampleFn=window.claude?.use?await window.claude.use("sample"):null}catch(e){sampleFn=null}return sampleFn}
 function findSet(name){const q=String(name||"").toLowerCase();return okSets().find(d=>d.id===q||d.file.toLowerCase()===q)||okSets().find(d=>(d.lector+" "+d.rol+" "+d.file).toLowerCase().includes(q))}
 const TOOLS=[
  {name:"resumen",description:"Devuelve la lista de conjuntos de datos importados (id, archivo, lector, tipo lote o calibración, unidad) con sus estadísticas principales y los criterios de aceptación activos. Úsala primero.",
@@ -1639,7 +1728,7 @@ function renderAsk(v){
   v.innerHTML=`<div class="card chat"><div class="msgs" id="msgs"></div>
    <div style="display:grid;gap:8px"><div class="chips" id="chips">${["¿Qué dosímetros se descartaron y por qué?","¿Cuál es el CV de cada lote?","¿Qué TLD tiene la lectura más alta del TLDCube?","¿La calibración del Harshaw cumple con las normas?","Compara la dosis media de los dos lectores"].map(q=>`<button class="chip">${q}</button>`).join("")}</div>
    <div class="composer"><textarea id="askIn" rows="2" placeholder="Escribe una pregunta sobre tus datos" aria-label="Pregunta"></textarea><button class="btn pri" id="askBtn" style="height:36px">Preguntar</button></div>
-   <div class="hint">El asistente se conecta al proveedor de IA configurado en la plataforma anfitriona. Solo comparte los datos necesarios para responder tus preguntas; el resto del programa funciona sin conexión.</div></div></div>`;
+   <div class="hint">El asistente es Claude. Usa tu propia cuenta (cuenta para tu límite de uso, sin costo aparte) y le envía los datos que necesita consultar. El resto del programa funciona sin conexión.</div></div></div>`;
   const box=$("#msgs");
   const paint=()=>{box.innerHTML=S.chat.length?S.chat.map(m=>`<div class="msg ${m.role==="user"?"u":m.role==="sys"?"s":"a"}">${esc(m.content)}</div>`).join(""):`<div class="msg s">Tus preguntas y las respuestas aparecerán aquí.</div>`;box.scrollTop=box.scrollHeight};
   paint();let busy=false,ctl=null;
@@ -1649,7 +1738,7 @@ function renderAsk(v){
     const bubble=box.lastElementChild;ctl=new AbortController();
     const raw=[{role:"user",content:RULES},{role:"assistant",content:"Entendido."},...S.chat.slice(0,-1).filter(m=>m.role!=="sys").slice(-10).map(m=>({role:m.role,content:m.content}))];const turns=[];raw.forEach(m=>{const l=turns[turns.length-1];if(l&&l.role===m.role)l.content+="\n\n"+m.content;else turns.push({...m})});if(turns[2]&&turns[2].role!=="user")turns.splice(2,1);
     try{const{text}=await sample(turns,{cache:false,signal:ctl.signal,tools:TOOLS,onText:({text})=>{bubble.textContent=text;box.scrollTop=box.scrollHeight}});S.chat[S.chat.length-1].content=text}
-    catch(e){S.chat[S.chat.length-1].content=e.text||({not_granted:"No se concedió permiso para utilizar el servicio de IA en esta página.",rate_limited:"Demasiadas preguntas seguidas. Espera un momento.",cancelled:"Detenido."}[e.code]||"No se pudo obtener respuesta.")}
+    catch(e){S.chat[S.chat.length-1].content=e.text||({not_granted:"No se dio permiso para usar a Claude en esta página.",rate_limited:"Demasiadas preguntas seguidas. Espera un momento.",cancelled:"Detenido."}[e.code]||"No se pudo obtener respuesta.")}
     busy=false;$("#askBtn").textContent="Preguntar";paint()};
   $("#askBtn").onclick=()=>{if(busy){ctl?.abort();return}const ta=$("#askIn");ask(ta.value);ta.value=""};
   $("#askIn").onkeydown=e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();$("#askBtn").click()}};
@@ -1676,7 +1765,11 @@ function renderHelp(v){
 }
 
 /* ---------- reporte en PDF (figuras estilo matplotlib, PDF y paquete de figuras) ---------- */
-const SCI={style:lsGet("tld-sci-style")||"mpl",grid:lsGet("tld-sci-grid")!=="0"};
+const SCI={style:lsGet("tld-sci-style")||"mpl",grid:lsGet("tld-sci-grid")!=="0",off:new Set(),
+  fmt:(()=>{const d={pdf:1,png:1,svg:1,csv:1,tex:1,py:1};try{return Object.assign(d,JSON.parse(lsGet("tld-sci-fmt")||"{}"))}catch(e){return d}})()};
+const figId=f=>f.key+"|"+f.lector;
+const FMT=[["pdf","Reporte PDF"],["png","PNG 300 dpi"],["svg","SVG"],["csv","Datos CSV"],["tex","LaTeX"],["py","Python"]];
+function pickFigs(){const all=sciFigures(),sel=all.filter(f=>!SCI.off.has(figId(f)));sel.forEach((f,i)=>{f.n=i+1;f.file=`fig${String(i+1).padStart(2,"0")}_${f.key}_${slug(f.lector)}`});return sel}
 const TAB10=["#1f77b4","#ff7f0e","#2ca02c","#d62728","#9467bd","#8c564b","#e377c2","#7f7f7f","#bcbd22","#17becf"];
 const SC={ok:"#1f77b4",warn:"#ff7f0e",bad:"#d62728"};
 const SFONT=()=>SCI.style==="serif"?"'STIX Two Text','Times New Roman',Times,serif":"'DejaVu Sans','Bitstream Vera Sans',Verdana,Arial,Helvetica,sans-serif";
@@ -1684,7 +1777,7 @@ const SUPM={"-":"⁻","0":"⁰","1":"¹","2":"²","3":"³","4":"⁴","5":"⁵","
 const sup=n=>String(n).split("").map(c=>SUPM[c]||c).join("");
 const minus=s=>String(s).replace(/^-/,"−");
 const tick=v=>minus(+(+v).toPrecision(8)+"");
-function expo(vals){const m=Math.max(0,...vals.filter(v=>v!=null&&isFinite(v)).map(Math.abs));return m>=1e4?Math.floor(Math.log10(m)):0}
+function expo(vals){const m=amax(0,vals.filter(v=>v!=null&&isFinite(v)).map(Math.abs));return m>=1e4?Math.floor(Math.log10(m)):0}
 function lab(t,u,k){const s=k?"×10"+sup(k):"";return u||s?`${t} (${[s,u].filter(Boolean).join(" ")})`:t}
 function pad(lo,hi,f=.05){const r=(hi-lo)||Math.abs(hi)||1;return[lo-r*f,hi+r*f]}
 function sAx(o){const F=SFONT(),k=o.k||0,cat=o.type==="category";
@@ -1712,17 +1805,17 @@ function sciFigures(){
     if(d.kind==="curvas"){const byName={};rows.forEach(r=>byName[r.name]=r);
       const tx=d.hasT?"Temperatura":d.xUnit==="s"?"Tiempo":d.xUnit==="canal"?"Canal":"Temperatura",tu=d.hasT?"°C":d.xUnit==="canal"?"":d.xUnit;
       const ser=[],grp={ok:"Aceptados",warn:"Revisar",bad:"Descartados"};let ymax=0;
-      rows.forEach(r=>{if(!r.curve)return;const pts=(r.tcurve||r.curve).map(p=>[p[0],p[1]]);pts.forEach(p=>{if(p[1]>ymax)ymax=p[1]});
+      rows.forEach(r=>{if(!r.curve)return;const pts=thin(r.tcurve||r.curve,400).map(p=>[p[0],p[1]]);pts.forEach(p=>{if(p[1]>ymax)ymax=p[1]});
         ser.push({name:`${grp[r.status]}`,type:"line",symbol:"none",silent:true,data:pts,lineStyle:{width:r.status==="ok"?.8:1.1,opacity:r.status==="ok"?.35:.95,color:SC[r.status]},itemStyle:{color:SC[r.status]},z:r.status==="ok"?1:2})});
       let meanCurve=null;if(!d.hasT){const acc=d.cols.filter(c=>byName[c.name]?.status==="ok");meanCurve=d.x.map((x,i)=>{const v=acc.map(c=>c.y[i]).filter(v=>v!=null);return x!=null&&v.length?[x,mean(v)]:null}).filter(Boolean)}
-      if(meanCurve)ser.push({name:"Promedio de aceptados",type:"line",symbol:"none",silent:true,data:meanCurve,lineStyle:{color:"#000",width:1.8},itemStyle:{color:"#000"},z:4});
+      if(meanCurve){meanCurve=thin(meanCurve,600);ser.push({name:"Promedio de aceptados",type:"line",symbol:"none",silent:true,data:meanCurve,lineStyle:{color:"#000",width:1.8},itemStyle:{color:"#000"},z:4})}
       const k=expo([ymax]),xs=ser.flatMap(s=>s.data.map(p=>p[0]));
       const leg=[...new Set(ser.map(s=>s.name))].map(n=>({name:n,icon:"path://M0,4 H24 V6 H0 Z"}));
       add("curvas_brillo",L,`Curvas de brillo del lote ${L} (${d.file}), ${rows.filter(r=>r.curve).length} dosímetros. En azul los aceptados, en naranja los que conviene revisar y en rojo los descartados${meanCurve?"; en negro, el promedio de los aceptados":""}.`,
-        sBase({legend:sLeg(leg),xAxis:sAx({name:lab(tx,tu),min:Math.min(...xs),max:Math.max(...xs),edge:true}),yAxis:sAx({name:lab("Intensidad",d.yUnit,k),y:true,min:0,k}),series:ser}))}
+        sBase({legend:sLeg(leg),xAxis:sAx({name:lab(tx,tu),min:amin(xs),max:amax(xs),edge:true}),yAxis:sAx({name:lab("Intensidad",d.yUnit,k),y:true,min:0,k}),series:ser}))}
     /* lectura por dosímetro */
     const xk=xKey(good),vals=good.map(r=>r.value),k=expo(vals),ref=stats.ref,lo=ref*(1-st.tol/100),hi=ref*(1+st.tol/100);
-    const xs=good.map((r,i)=>xk.x(r,i)),[x0,x1]=pad(Math.min(...xs),Math.max(...xs),.03),[y0,y1]=pad(Math.min(...vals,lo),Math.max(...vals,hi),.08);
+    const xs=good.map((r,i)=>xk.x(r,i)),[x0,x1]=pad(amin(xs),amax(xs),.03),[y0,y1]=pad(amin(vals,lo),amax(vals,hi),.08);
     const sc=s=>({name:{ok:"Aceptado",warn:"Revisar",bad:"Descartado"}[s],type:"scatter",symbolSize:7,itemStyle:{color:SC[s],borderColor:"#000",borderWidth:.4},data:good.map((r,i)=>r.status===s?[xk.x(r,i),r.value]:null).filter(Boolean),z:5});
     const statusSer=["ok","warn","bad"].map(sc).filter(s=>s.data.length);
     add("lecturas",L,`Lectura integrada (área bajo la curva) de cada dosímetro del lote ${L}. La línea discontinua marca la ${refN} del lote (${fmtBig(ref)} ${U}) y la franja gris la tolerancia de ±${fmt(st.tol,1)} %.${omit}`,
@@ -1731,7 +1824,7 @@ function sciFigures(){
     /* gráfica de control */
     const dA=stats.dAcc;if(dA&&isFinite(dA.sd)){const m=dA.mean,s=dA.sd,lims=[[3,"#d62728","dotted"],[2,"#ff7f0e","dashed"]];
       const pts=good.map((r,i)=>{const z=Math.abs(r.value-m)/s;return{value:[xk.x(r,i),r.value],itemStyle:{color:z>3?SC.bad:z>2?SC.warn:SC.ok}}});
-      const [cy0,cy1]=pad(Math.min(...vals,m-3.2*s),Math.max(...vals,m+3.2*s),.04);
+      const [cy0,cy1]=pad(amin(vals,m-3.2*s),amax(vals,m+3.2*s),.04);
       add("control",L,`Gráfica de control de valores individuales del lote ${L}. La media (línea continua) y los límites de ±2σ y ±3σ se calculan con los ${dA.n} dosímetros aceptados (media ${fmtBig(m)} ${U}, σ = ${fmtBig(s)} ${U}). Los puntos naranjas rebasan ±2σ y los rojos ±3σ.${omit}`,
         sBase({legend:sLeg(["Media","±2σ","±3σ"]),xAxis:sAx({name:xk.name,min:x0,max:x1,padded:true}),yAxis:sAx({name:lab("Lectura integrada",U,k),y:true,min:cy0,max:cy1,padded:true,k}),
           series:[{name:"Lectura",type:"line",data:pts,symbol:"circle",symbolSize:6,lineStyle:{color:"#555",width:.8},itemStyle:{borderColor:"#000",borderWidth:.4},z:5},hline("Media",[[x0,m],[x1,m]],"#000","solid",1.2),
@@ -1739,39 +1832,39 @@ function sciFigures(){
     /* histograma con ajuste normal */
     if(vals.length>=5){const dd=describe(vals),nb=Math.max(5,Math.ceil(Math.log2(vals.length)+1)),B=bins(vals,nb),kk=expo(vals);
       const pdf=[];const a0=Math.min(B.e[0],dd.mean-3.5*dd.sd),a1=Math.max(B.e[B.e.length-1],dd.mean+3.5*dd.sd);for(let i=0;i<=160;i++){const x=a0+(a1-a0)*i/160;pdf.push([x,vals.length*B.w*Math.exp(-.5*((x-dd.mean)/dd.sd)**2)/(dd.sd*Math.sqrt(2*Math.PI))])}
-      const [hx0,hx1]=pad(a0,a1,.02),ymaxH=Math.max(...B.c,...pdf.map(p=>p[1]));
+      const [hx0,hx1]=pad(a0,a1,.02),ymaxH=amax(B.c,pdf.map(p=>p[1]));
       add("histograma",L,`Distribución de las lecturas del lote ${L} (${vals.length} dosímetros con señal, ${nb} clases según la regla de Sturges) con la densidad normal de misma media y desviación estándar. Asimetría ${fmt(dd.sk,2)}, curtosis en exceso ${fmt(dd.ku,2)}; prueba de Jarque-Bera p = ${fmt(dd.jbP,3)}.`,
         sBase({legend:sLeg(["Dosímetros","Ajuste normal"]),xAxis:sAx({name:lab("Lectura integrada",U,kk),min:hx0,max:hx1,padded:true,k:kk}),yAxis:sAx({name:"Frecuencia (dosímetros)",y:true,min:0,max:Math.ceil(ymaxH*1.12),gap:44}),
           series:[{name:"Dosímetros",type:"custom",silent:true,itemStyle:{color:"#1f77b4"},data:B.c.map((c,i)=>[B.e[i],B.e[i+1],c]),encode:{x:[0,1],y:2},
             renderItem:(p,api)=>{const a=api.coord([api.value(0),api.value(2)]),b=api.coord([api.value(1),0]);return{type:"rect",shape:{x:a[0],y:a[1],width:b[0]-a[0],height:b[1]-a[1]},style:{fill:"#1f77b4",stroke:"#000",lineWidth:.8,opacity:.85}}}},
             {name:"Ajuste normal",type:"line",symbol:"none",silent:true,data:pdf,lineStyle:{color:"#d62728",width:1.8},itemStyle:{color:"#d62728"},z:4}]}))
       /* Q-Q */
-      const srt=[...vals].sort((a,b)=>a-b),n=srt.length,qq=srt.map((v,i)=>[normInv((i+1-.375)/(n+.25)),(v-dd.mean)/dd.sd]);const qa=Math.max(...qq.flatMap(p=>p.map(Math.abs)))*1.08;
+      const srt=[...vals].sort((a,b)=>a-b),n=srt.length,qq=srt.map((v,i)=>[normInv((i+1-.375)/(n+.25)),(v-dd.mean)/dd.sd]);const qa=amax(qq.flatMap(p=>p.map(Math.abs)))*1.08;
       add("qq",L,`Gráfica cuantil-cuantil normal de las lecturas estandarizadas del lote ${L} (posiciones de Blom). Si los datos fueran normales, los puntos seguirían la recta y = x.`,
         sBase({legend:sLeg(["Dosímetros","Recta y = x"],{left:84,top:30}),xAxis:sAx({name:"Cuantil teórico de la normal estándar",min:-qa,max:qa,padded:true}),yAxis:sAx({name:"Lectura estandarizada (z)",y:true,min:-qa,max:qa,padded:true,gap:44}),
           series:[hline("Recta y = x",[[-qa,-qa],[qa,qa]],"#d62728","solid",1.2),{name:"Dosímetros",type:"scatter",symbolSize:6,itemStyle:{color:"#1f77b4",borderColor:"#000",borderWidth:.4},data:qq,z:5}]},{left:70}),560,440)}
     /* desviación relativa (aceptación) */
-    const devs=good.map(r=>r.dev),dm=Math.max(st.tol*1.25,...devs.map(Math.abs))*1.08;
+    const devs=good.map(r=>r.dev),dm=amax(st.tol*1.25,devs.map(Math.abs))*1.08;
     add("desviacion",L,`Desviación de cada dosímetro del lote ${L} respecto a la ${refN}. Las líneas rojas marcan el criterio de aceptación de ±${fmt(st.tol,1)} %; los colores siguen el estado final (azul aceptado, naranja revisar, rojo descartado).${omit}`,
       sBase({xAxis:sAx({name:xk.name,min:x0,max:x1,padded:true}),yAxis:sAx({name:lab("Desviación respecto a la "+refN,"%"),y:true,min:-dm,max:dm,padded:true,gap:44}),
         series:[{type:"bar",barWidth:Math.max(2,Math.min(9,380/good.length)),silent:true,data:good.map((r,i)=>({value:[xk.x(r,i),r.dev],itemStyle:{color:SC[r.status]}})),z:3},hline("0",[[x0,0],[x1,0]],"#000","solid",.9),hline("+tol",[[x0,st.tol],[x1,st.tol]],"#d62728"),hline("-tol",[[x0,-st.tol],[x1,-st.tol]],"#d62728")]},{left:70}));
     /* ECF */
-    const ecf=good.map(r=>r.ecf),[e0,e1]=pad(Math.min(...ecf,1),Math.max(...ecf,1),.12);
+    const ecf=good.map(r=>r.ecf),[e0,e1]=pad(amin(ecf,1),amax(ecf,1),.12);
     add("ecf",L,`Factor de corrección individual de cada dosímetro del lote ${L}, ECF = ${refN} del lote ÷ lectura del dosímetro. Un factor mayor que 1 indica un dosímetro menos sensible que el típico.${omit}`,
       sBase({xAxis:sAx({name:xk.name,min:x0,max:x1,padded:true}),yAxis:sAx({name:"Factor de corrección (ECF)",y:true,min:e0,max:e1,padded:true,gap:48}),
         series:[hline("1",[[x0,1],[x1,1]],"#000","dashed",1),{type:"scatter",symbolSize:6,data:good.map((r,i)=>({value:[xk.x(r,i),r.ecf],itemStyle:{color:SC[r.status],borderColor:"#000",borderWidth:.4}})),z:5}]},{left:76}));
   });
   /* calibración */
   okSets().filter(d=>d.rol==="cal").forEach((d,di)=>{SEC=50+di;const a=analyzeCal(d);if(!a.fit)return;const L=d.lector,U=a.unit.label,f=a.fit;
-    const pts=a.rows.filter(r=>r.dose!=null&&r.corr!=null),mxD=Math.max(...pts.map(p=>p.dose)),k=expo(pts.map(p=>p.corr)),[dx0,dx1]=pad(0,mxD,.05);
-    const ys=pts.map(p=>p.corr),[cy0,cy1]=pad(Math.min(0,...ys),Math.max(...ys),.06);
+    const pts=a.rows.filter(r=>r.dose!=null&&r.corr!=null),mxD=amax(pts.map(p=>p.dose)),k=expo(pts.map(p=>p.corr)),[dx0,dx1]=pad(0,mxD,.05);
+    const ys=pts.map(p=>p.corr),[cy0,cy1]=pad(amin(0,ys),amax(ys),.06);
     const eq=`Ajuste: y = ${tick(+(f.b/10**expo([f.b])).toPrecision(4))}×10${sup(expo([f.b]))} D ${f.a<0?"−":"+"} ${tick(+(Math.abs(f.a)/10**expo([f.a])).toPrecision(3))}${expo([f.a])?"×10"+sup(expo([f.a])):""}  (R² = ${f.r2.toFixed(4)})`;
     const g=s=>({name:{ok:"Dosímetros",warn:"Revisar",na:"Sin dosis"}[s],type:"scatter",symbolSize:8,itemStyle:{color:s==="warn"?SC.warn:SC.ok,borderColor:"#000",borderWidth:.5},data:pts.filter(p=>p.status===s||(s==="ok"&&p.status==="na")).map(p=>[p.dose,p.corr]),z:5});
     const ser=[g("ok"),g("warn")].filter(s=>s.data.length);
     add("calibracion",L,`Curva de calibración del lector ${L} (${d.file}): lectura corregida con el factor individual de cada dosímetro contra dosis impartida, con su ajuste por mínimos cuadrados. Pendiente ${fmtBig(f.b)} ${U}/mGy (error estándar ${fmtBig(f.seB)}), R² = ${fmt(f.r2,4)}, n = ${f.n}${f.ld!=null?`; límite de detección ${fmt(f.ld,3)} mGy`:""}.`,
       sBase({legend:sLeg([eq,...ser.map(s=>s.name)],{left:100,top:30}),xAxis:sAx({name:"Dosis impartida (mGy)",min:dx0,max:dx1,padded:true}),yAxis:sAx({name:lab("Lectura corregida",U,k),y:true,min:cy0,max:cy1,padded:true,k}),
         series:[hline(eq,[[0,f.a],[dx1,f.a+f.b*dx1]],"#d62728","solid",1.4),...ser]}));
-    const rp=pts.filter(p=>p.res!=null),rm=Math.max(S.settings.tol*1.3,...rp.map(p=>Math.abs(p.res)))*1.1;
+    const rp=pts.filter(p=>p.res!=null),rm=amax(S.settings.tol*1.3,rp.map(p=>Math.abs(p.res)))*1.1;
     if(rp.length)add("residuos",L,`Residuos relativos del ajuste de calibración del lector ${L}: (lectura − recta) ÷ recta. Las líneas discontinuas marcan ±${fmt(S.settings.tol,1)} %.`,
       sBase({xAxis:sAx({name:"Dosis impartida (mGy)",min:dx0,max:dx1,padded:true}),yAxis:sAx({name:lab("Residuo relativo","%"),y:true,min:-rm,max:rm,padded:true,gap:44}),
         series:[hline("0",[[dx0,0],[dx1,0]],"#000","solid",.9),hline("+",[[dx0,S.settings.tol],[dx1,S.settings.tol]],"#d62728"),hline("-",[[dx0,-S.settings.tol],[dx1,-S.settings.tol]],"#d62728"),
@@ -1793,7 +1886,7 @@ function sciTables(){const T=[],st=S.settings,refN=st.ref==="mean"?"media":"medi
   T.push({key:"criterios",title:"Criterios y parámetros del análisis.",cols:[{h:"Parámetro",w:62},{h:"Valor",w:98}],rows:[
     ["Referencia del lote",refN[0].toUpperCase()+refN.slice(1)+" de los dosímetros con señal"],["Tolerancia de aceptación",`±${fmt(st.tol,1)} % respecto a la referencia`],
     ["Umbral de señal",`Lecturas menores al ${fmt(st.noSignal,0)} % de la mediana se consideran sin señal`],["Tolerancia del pico",`±${fmt(st.peakTol,0)} °C respecto al pico típico del lote`],
-    ["Integración","Regla del trapecio sobre la curva de brillo (o suma de canales)"],["Desviación estándar","Muestral (n − 1); IC 95 % de la media con t de Student"],
+    ["Integración","Regla del trapecio contra la temperatura (o suma de canales en el barrido ROI)"],["Desviación estándar","Muestral (n − 1); IC 95 % de la media con t de Student"],
     ...okSets().map(d=>[`${d.rol==="cal"?"Calibración":"Lote"} ${d.lector}`,`${d.file}; ${unitInfo(d).note}`])]});
   okSets().filter(d=>d.rol==="lote").forEach(d=>{const{rows,stats,unit}=analyzeLote(d),U=unit.label,L=d.lector,a=stats.dAll,b=stats.dAcc;
     const r2=(n,f)=>[n,a?f(a):"—",b?f(b):"—"],F=v=>fmtBig(v);
@@ -1845,7 +1938,7 @@ async function buildPDF(figs,tabs,imgs){const{jsPDF}=window.jspdf;const doc=new 
     const rule=w=>{doc.setLineWidth(w);doc.setDrawColor(0);doc.line(M,y,M+TW,y)};
     const hdr=()=>{rule(.45);y+=1;font("bold",sz);let x=M;t.cols.forEach((c,i)=>{const tx=pT(c.h);doc.text(tx,c.al==="right"?x+cw[i]-1:x+1,y+lh+.6,{align:c.al==="right"?"right":"left"});x+=cw[i]});y+=lh+2.2;rule(.25);y+=1};
     cap();hdr();
-    t.rows.forEach(r=>{font("normal",sz);const cells=r.map((v,i)=>doc.splitTextToSize(pT(v),cw[i]-2)),h=Math.max(...cells.map(c=>c.length))*lh+1.6;
+    t.rows.forEach(r=>{font("normal",sz);const cells=r.map((v,i)=>doc.splitTextToSize(pT(v),cw[i]-2)),h=amax(cells.map(c=>c.length))*lh+1.6;
       if(y+h>BOT-2){rule(.45);doc.addPage();y=M;font("italic",8.5);doc.text(pT(`Tabla ${t.n} (continuación)`),M,y+3);y+=5.5;hdr()}
       let x=M;cells.forEach((c,i)=>{c.forEach((l,j)=>doc.text(l,t.cols[i].al==="right"?x+cw[i]-1:x+1,y+lh*(j+1),{align:t.cols[i].al==="right"?"right":"left"}));x+=cw[i]});y+=h});
     rule(.45);y+=7};
@@ -1882,10 +1975,10 @@ const texEsc=s=>String(s??"").replace(/\\/g,"\\textbackslash{}").replace(/([%&#_
   .replace(/°/g,"\\textdegree{}").replace(/²/g,"\\textsuperscript{2}").replace(/₀/g,"$_0$").replace(/·/g,"$\\cdot$").replace(/[–—]/g,"--").replace(/…/g,"\\ldots{}").replace(/“|”/g,'"');
 const texNum=s=>String(s).replace(/,(?=\d{3}(\D|$))/g,"\\,");
 function texTables(tabs){return tabs.filter(t=>!t.long).map(t=>{const narrow=t.cols.every(c=>c.al==="right"||c.w<40);
-  const tot=t.cols.reduce((s,c)=>s+c.w,0),spec=t.cols.map((c,i)=>c.al==="right"?"r":Math.max(String(c.h).length,...t.rows.map(r=>String(r[i]??"").length))>28?`>{\\raggedright\\arraybackslash}p{${(c.w/tot*14.5).toFixed(1)}cm}`:"l").join("");
+  const tot=t.cols.reduce((s,c)=>s+c.w,0),spec=t.cols.map((c,i)=>c.al==="right"?"r":amax(String(c.h).length,t.rows.map(r=>String(r[i]??"").length))>28?`>{\\raggedright\\arraybackslash}p{${(c.w/tot*14.5).toFixed(1)}cm}`:"l").join("");
   return`% Tabla ${t.n}\n\\begin{table}[htbp]\n  \\centering\n  \\small\n  \\caption{${texEsc(t.title.replace(/\.$/,""))}}\n  \\label{tab:${t.key}${t.lector?"-"+slug(t.lector).toLowerCase():""}}\n  \\begin{tabular}{${spec}}\n    \\toprule\n    ${t.cols.map(c=>texEsc(c.h)).join(" & ")} \\\\\n    \\midrule\n${t.rows.map(r=>"    "+r.map(v=>texNum(texEsc(v))).join(" & ")+" \\\\").join("\n")}\n    \\bottomrule\n  \\end{tabular}\n\\end{table}\n`}).join("\n")}
 function texFigures(figs){return figs.map(f=>`% Figura ${f.n}\n\\begin{figure}[htbp]\n  \\centering\n  \\includegraphics[width=${f.w>600?"0.95":"0.8"}\\linewidth]{${f.file}}\n  \\caption{${texEsc(f.caption)}}\n  \\label{fig:${f.key}${f.lector?"-"+slug(f.lector).toLowerCase():""}}\n\\end{figure}\n`).join("\n")}
-const csvOf=a=>"\ufeff"+a.map(r=>r.map(v=>{if(v==null||(typeof v==="number"&&!isFinite(v)))return"";const s=typeof v==="number"?String(v):String(v);return/[",\n;]/.test(s)?`"${s.replace(/"/g,'""')}"`:s}).join(",")).join("\n");
+const csvOf=a=>"\ufeff"+a.map(r=>r.map(csvCell).join(",")).join("\n");
 const PY=`"""Regenera las figuras principales del reporte de TLD Analytics con matplotlib.
 TLD Analytics fue diseñado por Jesús Morelos.
 Uso:  python graficas.py   (desde la carpeta python/ del paquete)
@@ -1963,45 +2056,65 @@ for archivo in sorted(DATOS.glob("calibracion_*.csv")):
 
 print("Figuras guardadas en", SALIDA)
 `;
-async function buildZip(figs,tabs,imgs,pdf){const z=new JSZip();z.file("reporte_TLD_Analytics.pdf",pdf);
-  for(const f of figs){z.file(`figuras/png/${f.file}.png`,imgs[f.file].png);z.file(`figuras/svg/${f.file}.svg`,f.svg)}
-  tabs.filter(t=>t.csv).forEach(t=>{const name=t.key==="listado"?"lecturas":t.key;z.file(`datos/${name}${t.lector?"_"+slug(t.lector):""}.csv`,csvOf(t.csv))});
-  okSets().filter(d=>d.rol==="lote"&&d.kind==="curvas").forEach(d=>{const{rows}=analyzeLote(d),xu=d.hasT?"Temperatura (°C)":d.xUnit==="canal"?"Canal":d.xUnit==="s"?"Tiempo (s)":"Temperatura (°C)";
+async function buildZip(figs,tabs,imgs,pdf,F=SCI.fmt){const z=new JSZip();if(F.pdf&&pdf)z.file("reporte_TLD_Analytics.pdf",pdf);
+  for(const f of figs){if(F.png||F.tex)z.file(`figuras/png/${f.file}.png`,imgs[f.file].png);if(F.svg)z.file(`figuras/svg/${f.file}.svg`,f.svg)}
+  if(F.csv)tabs.filter(t=>t.csv).forEach(t=>{const name=t.key==="listado"?"lecturas":t.key;z.file(`datos/${name}${t.lector?"_"+slug(t.lector):""}.csv`,csvOf(t.csv))});
+  if(F.csv)okSets().filter(d=>d.rol==="lote"&&d.kind==="curvas").forEach(d=>{const{rows}=analyzeLote(d),xu=d.hasT?"Temperatura (°C)":d.xUnit==="canal"?"Canal":d.xUnit==="s"?"Tiempo (s)":"Temperatura (°C)";
     const out=[["dosimetro","x","y","estado","x_unidad","y_unidad"]];rows.forEach(r=>{if(!r.curve)return;(r.tcurve||r.curve).forEach(p=>out.push([r.name,p[0],p[1],r.noSig?"Sin señal":stName(r.status),xu,"Intensidad ("+d.yUnit+")"]))});
     z.file(`datos/curvas_${slug(d.lector)}.csv`,csvOf(out))});
-  const tf=texFigures(figs),tt=texTables(tabs);z.file("latex/figuras.tex",tf);z.file("latex/tablas.tex",tt);
-  z.file("latex/ejemplo.tex",`% Documento mínimo que compila las figuras y tablas del reporte.\n% Generado con TLD Analytics, diseñado por Jesús Morelos.\n\\documentclass[11pt]{article}\n\\usepackage[spanish,es-tabla]{babel}\n\\usepackage{graphicx,booktabs,textcomp,array}\n\\usepackage[margin=2.5cm]{geometry}\n\\graphicspath{{../figuras/png/}}\n\\begin{document}\n\\section*{Resultados}\n\\input{tablas.tex}\n\\input{figuras.tex}\n\\end{document}\n`);
-  z.file("python/graficas.py",PY);
-  z.file("LEEME.txt",`Paquete de figuras y datos generado con TLD Analytics (diseñado por Jesús Morelos).\n\nreporte_TLD_Analytics.pdf   Reporte completo con figuras numeradas y tablas.\nfiguras/png/                Figuras a 300 dpi, listas para Word o LaTeX.\nfiguras/svg/                Las mismas figuras en vector (se pueden editar en Inkscape o Illustrator).\ndatos/                      Datos en CSV: lecturas por dosímetro, estadística, curvas, calibración y normas.\nlatex/                      figuras.tex y tablas.tex para \\\\input{} en tu documento; ejemplo.tex compila todo.\n                            Paquetes necesarios: graphicx, booktabs, textcomp, babel (spanish).\npython/graficas.py    Regenera las figuras principales con matplotlib a partir de datos/.\n\nCriterios usados: referencia = ${S.settings.ref==="mean"?"media":"mediana"}, tolerancia = ±${S.settings.tol} %.\n`);
+  if(F.tex){const tf=texFigures(figs),tt=texTables(tabs);z.file("latex/figuras.tex",tf);z.file("latex/tablas.tex",tt);
+  z.file("latex/ejemplo.tex",`% Documento mínimo que compila las figuras y tablas del reporte.\n% Generado con TLD Analytics, diseñado por Jesús Morelos.\n\\documentclass[11pt]{article}\n\\usepackage[spanish,es-tabla]{babel}\n\\usepackage{graphicx,booktabs,textcomp,array}\n\\usepackage[margin=2.5cm]{geometry}\n\\graphicspath{{../figuras/png/}}\n\\begin{document}\n\\section*{Resultados}\n\\input{tablas.tex}\n\\input{figuras.tex}\n\\end{document}\n`)}
+  if(F.py)z.file("python/graficas.py",PY);
+  z.file("LEEME.txt",`Paquete de figuras y datos generado con TLD Analytics (diseñado por Jesús Morelos).\nIncluye ${figs.length} figura${figs.length===1?"":"s"} elegida${figs.length===1?"":"s"} y solo los formatos marcados al descargar; puede faltar alguna de las carpetas siguientes.\n\nreporte_TLD_Analytics.pdf   Reporte completo con figuras numeradas y tablas.\nfiguras/png/                Figuras a 300 dpi, listas para Word o LaTeX.\nfiguras/svg/                Las mismas figuras en vector (se pueden editar en Inkscape o Illustrator).\ndatos/                      Datos en CSV: lecturas por dosímetro, estadística, curvas, calibración y normas.\nlatex/                      figuras.tex y tablas.tex para \\\\input{} en tu documento; ejemplo.tex compila todo.\n                            Paquetes necesarios: graphicx, booktabs, textcomp, babel (spanish).\npython/graficas.py    Regenera las figuras principales con matplotlib a partir de datos/.\n\nCriterios usados: referencia = ${S.settings.ref==="mean"?"media":"mediana"}, tolerancia = ±${S.settings.tol} %.\n`);
   const u=await z.generateAsync({type:"uint8array",compression:"DEFLATE",compressionOptions:{level:6}});return u.buffer.slice(u.byteOffset,u.byteOffset+u.byteLength)}
 
 async function makeReport(kind){if(!window.jspdf||(kind==="zip"&&!window.JSZip)){toast("No se pudieron cargar las librerías del reporte");return}
-  const figs=sciFigures(),tabs=sciTables();Loader.open(kind==="zip"?"Armando el paquete de figuras":"Armando el reporte",figs.length+3);
-  const imgs={};try{for(const f of figs){Loader.step(`Dibujando la figura ${f.n} de ${figs.length}`);f.svg=svgOf(f.opt,f.w,f.h);const p=await svgToPng(f.svg,f.w,f.h,3);imgs[f.file]={url:p.url,png:pngDpi(p.buf,300)}}
-    Loader.step("Escribiendo el PDF");await sleep(60);const pdf=await buildPDF(figs,tabs,imgs);let data=pdf,name="reporte_TLD_Analytics.pdf";
-    if(kind==="zip"){Loader.step("Comprimiendo figuras, datos y LaTeX");await sleep(60);data=await buildZip(figs,tabs,imgs,pdf);name="TLD_Analytics_figuras.zip"}
+  const F=SCI.fmt;let figs,tabs;try{figs=pickFigs();tabs=sciTables()}catch(e){console.error(e);toast("No se pudieron preparar las figuras");return}
+  const needPdf=kind==="pdf"||F.pdf,needPng=needPdf||F.png||F.tex,needSvg=needPng||F.svg;
+  Loader.open(kind==="zip"?"Armando el paquete de figuras":"Armando el reporte",figs.length+3);
+  const imgs={};try{for(const f of figs){Loader.step(`Dibujando la figura ${f.n} de ${figs.length}`);if(needSvg)f.svg=svgOf(f.opt,f.w,f.h);if(needPng){const p=await svgToPng(f.svg,f.w,f.h,3);imgs[f.file]={url:p.url,png:pngDpi(p.buf,300)}}}
+    let pdf=null;if(needPdf){Loader.step("Escribiendo el PDF");await sleep(60);pdf=await buildPDF(figs,tabs,imgs)}let data=pdf,name="reporte_TLD_Analytics.pdf";
+    if(kind==="zip"){Loader.step("Comprimiendo lo que elegiste");await sleep(60);data=await buildZip(figs,tabs,imgs,pdf,F);name="TLD_Analytics_figuras.zip"}
     await Loader.done(kind==="zip"?"Paquete listo":"Reporte listo");const ok=await save(name,data);if(ok){S.exported=true}}
-  catch(e){console.error(e);await Loader.done("No se pudo generar");toast("No se pudo generar el reporte")}}
+  catch(e){console.error(e);await Loader.done("No se pudo generar");toast("No se pudo generar el reporte: "+(e.message||"error desconocido"))}}
+async function saveOne(f,fmt){try{const svg=svgOf(f.opt,f.w,f.h);
+    if(fmt==="svg"){const u=new TextEncoder().encode(svg);await save(f.file+".svg",u.buffer)}
+    else{const p=await svgToPng(svg,f.w,f.h,3);await save(f.file+".png",pngDpi(p.buf,300))}}
+  catch(e){console.error(e);toast("No se pudo guardar la figura")}}
 
-function openReport(){closeMenu();const bg=document.createElement("div");bg.className="sheetbg";
-  const draw=()=>{const figs=sciFigures();bg.querySelector("#rpGrid").innerHTML=figs.map(f=>`<figure class="rpf"><div class="rpimg">${svgOf(f.opt,f.w,f.h)}</div><figcaption><b>Figura ${f.n}.</b> ${esc(f.caption)}</figcaption></figure>`).join("");
-    bg.querySelector("#rpN").textContent=`${figs.length} figuras y ${sciTables().length} tablas`};
+function openReport(){closeMenu();const bg=document.createElement("div");bg.className="sheetbg";let figs=[],nT=0;
+  const upd=()=>{const k=figs.filter(f=>!SCI.off.has(figId(f))).length,anyF=FMT.some(([x])=>SCI.fmt[x]);
+    bg.querySelector("#rpN").textContent=`${k} de ${figs.length} figuras elegidas y ${nT} tablas`;
+    bg.querySelectorAll(".rpf").forEach((el,i)=>el.classList.toggle("off",SCI.off.has(figId(figs[i]))));
+    bg.querySelector("#rpPdf").disabled=!k;bg.querySelector("#rpZip").disabled=!anyF||(!k&&!SCI.fmt.csv)};
+  const draw=()=>{const g=bg.querySelector("#rpGrid");
+    try{figs=sciFigures();nT=sciTables().length;g.innerHTML=figs.map((f,i)=>`<figure class="rpf"><div class="rpck"><label><input type="checkbox" data-fi="${i}"${SCI.off.has(figId(f))?"":" checked"}> Incluir</label><span class="acts"><button class="btn" data-one="${i}|png" aria-label="Descargar solo la figura ${f.n} en PNG">PNG</button><button class="btn" data-one="${i}|svg" aria-label="Descargar solo la figura ${f.n} en SVG">SVG</button></span></div><div class="rpimg">${svgOf(f.opt,f.w,f.h)}</div><figcaption><b>Figura ${f.n}.</b> ${esc(f.caption)}</figcaption></figure>`).join("")}
+    catch(e){console.error(e);figs=[];g.innerHTML=`<p class="muted">No se pudieron dibujar las figuras de este proyecto (${esc(e.message||"error")}). Los datos siguen disponibles en la exportación a Excel.</p>`}
+    g.querySelectorAll("[data-fi]").forEach(c=>c.onchange=()=>{const id=figId(figs[+c.dataset.fi]);c.checked?SCI.off.delete(id):SCI.off.add(id);upd()});
+    g.querySelectorAll("[data-one]").forEach(b=>b.onclick=()=>{const[i,fm]=b.dataset.one.split("|");saveOne(figs[+i],fm)});upd()};
   bg.innerHTML=`<div class="sheet rp" role="dialog" aria-modal="true" aria-label="Reporte en PDF"><div class="ch"><div><h3>Reporte en PDF</h3><span class="sub" id="rpN"></span></div><button class="btn" id="rpClose">Cerrar</button></div>
-    <p class="muted" style="font-size:13px;line-height:1.5;margin:0">Figuras con formato de artículo, numeradas y con pie de figura, listas para usarse en un documento. El PDF trae todo junto; el paquete .zip agrega cada figura en PNG a 300 dpi y en SVG, los datos en CSV, las tablas y figuras en LaTeX y un script de Python para regenerarlas.</p>
+    <p class="muted" style="font-size:13px;line-height:1.5;margin:0">Elige qué figuras quieres. El PDF trae las figuras elegidas con sus tablas. El paquete .zip trae solo los formatos que marques abajo. Para bajar una sola figura, usa sus botones PNG o SVG.</p>
+    <div class="rpsel"><b>Figuras:</b><button class="btn" id="rpAll">Todas</button><button class="btn" id="rpNone">Ninguna</button></div>
+    <div class="rpsel" role="group" aria-label="Formatos del paquete"><b>En el .zip:</b>${FMT.map(([k,l])=>`<label><input type="checkbox" data-fmt="${k}"${SCI.fmt[k]?" checked":""}> ${l}</label>`).join("")}</div>
     <div class="rpbar"><div class="seg" role="group" aria-label="Estilo"><button data-sty="mpl" aria-pressed="${SCI.style==="mpl"}">Matplotlib</button><button data-sty="serif" aria-pressed="${SCI.style==="serif"}">Serif tipo LaTeX</button></div>
       <label class="sw"><input type="checkbox" id="rpGridT"${SCI.grid?" checked":""}> Cuadrícula</label><span style="flex:1"></span>
-      <button class="btn" id="rpZip">${icon("dl")}Figuras y datos (.zip)</button><button class="btn pri" id="rpPdf">${icon("dl")}Descargar PDF</button></div>
+      <button class="btn" id="rpZip">${icon("dl")}Descargar .zip</button><button class="btn pri" id="rpPdf">${icon("dl")}Descargar PDF</button></div>
     <div class="rpgrid" id="rpGrid"></div></div>`;
   document.body.appendChild(bg);draw();
   const close=()=>{bg.remove();document.removeEventListener("keydown",k)};const k=e=>{if(e.key==="Escape")close()};document.addEventListener("keydown",k);
   bg.onclick=e=>{if(e.target===bg)close()};bg.querySelector("#rpClose").onclick=close;
+  bg.querySelector("#rpAll").onclick=()=>{SCI.off.clear();bg.querySelectorAll("[data-fi]").forEach(c=>c.checked=true);upd()};
+  bg.querySelector("#rpNone").onclick=()=>{figs.forEach(f=>SCI.off.add(figId(f)));bg.querySelectorAll("[data-fi]").forEach(c=>c.checked=false);upd()};
+  bg.querySelectorAll("[data-fmt]").forEach(c=>c.onchange=()=>{SCI.fmt[c.dataset.fmt]=c.checked?1:0;lsSet("tld-sci-fmt",JSON.stringify(SCI.fmt));upd()});
   bg.querySelectorAll("[data-sty]").forEach(b=>b.onclick=()=>{SCI.style=b.dataset.sty;lsSet("tld-sci-style",SCI.style);bg.querySelectorAll("[data-sty]").forEach(o=>o.setAttribute("aria-pressed",o===b));draw()});
   bg.querySelector("#rpGridT").onchange=e=>{SCI.grid=e.target.checked;lsSet("tld-sci-grid",SCI.grid?"1":"0");draw()};
   bg.querySelector("#rpPdf").onclick=()=>{close();makeReport("pdf")};bg.querySelector("#rpZip").onclick=()=>{close();makeReport("zip")};
   bg.querySelector("#rpPdf").focus()}
 
 /* ---------- exportar ---------- */
-async function save(filename,data){try{const blob=data instanceof Blob?data:new Blob([data]);const u=URL.createObjectURL(blob);const a=document.createElement("a");a.href=u;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),4000);toast("Archivo guardado");return true}catch(e){toast("No se pudo guardar el archivo en este navegador");return false}}
+let dlFn;async function getDl(){if(dlFn!==undefined)return dlFn;try{dlFn=window.claude?.use?await window.claude.use("downloads"):null}catch(e){dlFn=null}return dlFn}
+async function save(filename,data){const dl=await getDl();if(!dl){try{const u=URL.createObjectURL(new Blob([data]));const a=document.createElement("a");a.href=u;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),4000);toast("Archivo guardado");return true}catch(e){toast("La descarga no está disponible en esta vista");return false}}
+  try{await dl.save({filename,data});toast("Archivo guardado");return true}catch(e){if(e.code!=="declined")toast("No se pudo guardar el archivo");return false}}
 function buildWorkbook(){
   const wb=XLSX.utils.book_new();
   const res=[["TLD Analytics","Diseñado por Jesús Morelos"],[],["Criterios","Tolerancia ±"+S.settings.tol+" %","Referencia: "+(S.settings.ref==="mean"?"media":"mediana")],[],["Conjunto","Lector","Tipo","Unidad","n","Aceptados","Revisar","Descartados","CV aceptados %","Factor por mGy","R²"]];
@@ -2011,6 +2124,15 @@ function buildWorkbook(){
     if(d.rol==="lote"){const{rows,unit}=analyzeLote(d);aoa=[["Dosímetro","Estado","Lectura ("+unit.label+")","Diferencia %","Factor de corrección","z","Percentil","Pico °C","Motivo"],...rows.map(r=>[r.name,stName(r.status),r.value,r.dev,r.ecf,r.z,r.pctl,r.peakT,r.flags.map(f=>f.t).join(" ")])]}
     else{const a=analyzeCal(d);aoa=[["Dosímetro","Dosis mGy","Lectura ("+a.unit.label+")","Factor","Corregida","Dosis evaluada mGy","Residuo %","Estado","Motivo"],...a.rows.map(r=>[r.name,r.dose,r.value,r.ecf,r.corr,r.hEval,r.res,stName(r.status),r.flags.map(f=>f.t).join(" ")])]}
     XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(aoa),((d.rol==="cal"?"Cal ":"Lote ")+d.lector+" "+(i+1)).slice(0,31))});
+  okSets().forEach((d,i)=>{if(!d.pairs)return;const tag=((d.rol==="cal"?"Cal ":"")+d.lector+" "+(i+1)).slice(0,22);
+    const st={};let calR={};if(d.rol==="lote")analyzeLote(d).rows.forEach(r=>st[r.name]=r);else analyzeCal(d).rows.forEach(r=>calR[r.name]=r);
+    const head=["Dosímetro","Serie","Lectura 1 (L1)","Lectura 2 (L2)","Neta (L1 - L2)","Residual L2/L1 (%)",...(d.rol==="cal"?["Dosis impartida (mGy)","Dosis evaluada (mGy)"]:["Diferencia (%)","Estado"]),"Observación"];
+    const aoa=[head,...d.cols.map(c=>{const q=d.pairs[c.name]||{},r=st[c.name]||calR[c.name]||{flags:[]};
+      return[c.name,q.serie||"",q.s1,q.s2,q.s1!=null?q.s1-(q.s2||0):null,q.res!=null?+q.res.toFixed(3):null,...(d.rol==="cal"?[r.dose,r.hEval]:[r.dev!=null?+r.dev.toFixed(3):null,r.noSig?"Sin señal":stName(r.status)]),(r.flags||[]).filter(f=>f.lvl!=="info").map(f=>f.t).join(" ")]})];
+    XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(aoa),("Netas "+tag).slice(0,31));
+    const n=d.x.length,tm=d.x.map((_,k)=>{const v=d.cols.map(c=>c.t?c.t[k]:null).filter(v=>v!=null);return v.length?+mean(v).toFixed(1):null});
+    const curv=[["Temperatura media (°C)","Punto",...d.cols.map(c=>c.name)],...d.x.map((x,k)=>[tm[k],x+1,...d.cols.map(c=>c.y[k])])];
+    XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(curv),("Curvas netas "+tag).slice(0,31))});
   XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet([["Lector","Área","Criterio","Referencia","Requisito","Resultado","Estado"],...lectores().flatMap(L=>checksFor(L).map(c=>[L,c.area,c.title,c.ref,c.crit,c.val,{ok:"Cumple",bad:"No cumple",warn:"Advertencia",info:"Referencia",na:"Sin datos"}[c.st]]))]),"Normas");
   return XLSX.write(wb,{bookType:"xlsx",type:"array"});
 }
@@ -2040,7 +2162,7 @@ const TOUR=[
  ["#steps","Pasos","Estos cinco pasos te guían de principio a fin. Se van marcando conforme avanzas."],
  ["#kpis","Indicadores","Lo más importante en números: cuántos dosímetros se pueden usar, cuántos no y si se cumplen las normas."],
  ["[data-go='insp']","Ficha de dosímetro","Elige cualquier dosímetro para ver su curva de brillo, sus números y una explicación paso a paso de por qué quedó aceptado o descartado."],
- ["[data-go='ask']","Asistente","Hazle preguntas en español sobre tus datos mediante el servicio de IA conectado a la plataforma."],
+ ["[data-go='ask']","Asistente","Hazle preguntas en español sobre tus datos. Usa Claude con tu propia cuenta."],
  ["#learnBtn","Explicaciones","Muestra u oculta los recuadros de ayuda que aparecen en cada pantalla."],
  ["#exportBtn","Exportar","Descarga un reporte en PDF con todas las gráficas y la estadística, guarda los resultados en Excel o guarda el proyecto para continuar después."]];
 function startTour(){if(S.active!=="home")go("home");let i=0;const hole=document.createElement("div");hole.className="tourhole";const card=document.createElement("div");card.className="tourcard";card.setAttribute("role","dialog");document.body.append(hole,card);
@@ -2098,6 +2220,12 @@ function closeProject(){const m=document.createElement("div");m.className="modal
     if(b.dataset.m==="save"){if(await save("TLD_Analytics_proyecto.json",projectJSON()))S.exported=true;return}
     m.remove();S.datasets=[];S.doses={};S.pend=[];S.sample=false;S.chat=[];S.visited={};S.exported=false;S.insp=null;S.xp=null;memo.clear();uid=0;
     S.active="home";renderNav();renderView();showStart("Proyecto cerrado. Hasta pronto.")}}
+(()=>{const app=document.querySelector(".app"),st=$("#start"),sync=()=>{app.inert=!st.hidden};new MutationObserver(sync).observe(st,{attributes:true,attributeFilter:["hidden"]});sync()})();
+document.addEventListener("keydown",e=>{const dl=[...document.querySelectorAll('[aria-modal="true"]')].filter(x=>x.getClientRects().length).pop();if(!dl)return;
+  if(e.key==="Escape"){const m=dl.closest(".modal");if(m){e.preventDefault();(m.querySelector('[data-m="x"]')||m).click?.();if(m.isConnected)m.remove()}return}
+  if(e.key!=="Tab")return;const f=[...dl.querySelectorAll('a[href],button:not([disabled]),input:not([disabled]):not([type=hidden]),select,textarea,[tabindex]:not([tabindex="-1"])')].filter(x=>x.getClientRects().length||x.closest("label")?.getClientRects().length);if(!f.length)return;
+  const a=f[0],z=f[f.length-1],cur=document.activeElement;if(!dl.contains(cur)){e.preventDefault();(e.shiftKey?z:a).focus();return}
+  if(e.shiftKey&&cur===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&cur===z){e.preventDefault();a.focus()}},true);
 $("#closeBtn").onclick=closeProject;$("#closeTop")&&($("#closeTop").onclick=closeProject);
 $("#brandLg").parentElement.style.cursor="pointer";$("#brandLg").parentElement.title="Volver al inicio";$("#brandLg").parentElement.onclick=()=>showStart();
 const stEl=$("#start");["dragenter","dragover"].forEach(ev=>stEl.addEventListener(ev,e=>{e.preventDefault();e.stopPropagation();stEl.classList.add("over")}));
@@ -2105,4 +2233,5 @@ stEl.addEventListener("dragleave",e=>{if(e.target===stEl)stEl.classList.remove("
 stEl.addEventListener("drop",e=>{e.preventDefault();e.stopPropagation();stEl.classList.remove("over");const f=[...e.dataTransfer.files];if(f.length)enterApp(()=>readFiles(f))});
 renderNav();renderView();paintStart();
 </script>
+
 </body></html>
